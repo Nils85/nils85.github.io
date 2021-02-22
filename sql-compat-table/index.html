@@ -12,7 +12,7 @@
 		<a href="#">Syntax</a><a href="function.html">Functions</a><a href="datatype.html">Data types</a>
 		&nbsp; compatibility table
 		<div>
-			inspired by <a href="https://kangax.github.io/compat-table/es6">ES6 compat table</a>
+			inspired by the <a href="https://kangax.github.io/compat-table/es6">ECMAScript compatibility table</a>
 			& created by <a href="https://github.com/nils85">Vince</a>
 			<span>Fork</span>
 		</div>
@@ -36,7 +36,8 @@
 					<th><b>SQLite</b><br>(embedded)</th>
 					<th><b>Microsoft<br>Access</b><br>(embedded)</th>
 					<th><b>Other</b><br>database<br>systems</th>
-					<th>ISO/IEC<br>standard</th>
+					<th><b>Other</b><br>database<br>systems</th>
+					<th>ANSI/ISO<br>standard</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -46,11 +47,12 @@
 					<td title="Oracle" class="compat-yes">Yes</td>
 					<td title="Postgres" class="compat-yes">Yes</td>
 					<td title="SQLserver" class="compat-yes">Yes</td>
-					<td title="DB2" class="compat-yes">Yes</td>
+					<td title="IBM DB2" class="compat-yes">Yes</td>
 					<td title="SQLite" class="compat-yes">Yes</td>
 					<td title="Access" class="compat-yes">Yes</td>
 					<td title="others" class="compat-yes">Yes</td>
-					<td></td>
+					<td title="others" class=""></td>
+					<td title="standard"></td>
 				</tr>
 				<tr>
 					<td>truncate table T</td>
@@ -58,11 +60,12 @@
 					<td title="Oracle" class="">?</td>
 					<td title="Postgres" class="compat-yes">Yes</td>
 					<td title="SQLserver" class="compat-yes">Yes</td>
-					<td title="DB2" class="">?</td>
+					<td title="IBM DB2" class="">?</td>
 					<td title="SQLite" class="compat-no">Yes</td>
 					<td title="Access" class="">?</td>
 					<td title="others" class="compat-no">Firebird</td>
-					<td>SQL:2008</td>
+					<td title="others" class=""></td>
+					<td title="standard">SQL:2008</td>
 				</tr>
 				<tr>
 					<td>delete from T</td>
@@ -70,65 +73,70 @@
 					<td title="Oracle" class="">?</td>
 					<td title="Postgres" class="compat-yes">Yes</td>
 					<td title="SQLserver" class="compat-yes">Yes</td>
-					<td title="DB2" class="">?</td>
+					<td title="IBM DB2" class="">?</td>
 					<td title="SQLite" class="compat-yes">Yes</td>
 					<td title="Access" class="">?</td>
 					<td title="others" class=""></td>
-					<td></td>
+					<td title="others" class=""></td>
+					<td title="standard"></td>
 				</tr>
 				<tr>
-					<td colspan="10">Join syntax</th>
+					<td colspan="11">Join syntax</th>
 				</tr>
 				<tr>
 					<td>... from T left <s>outer</s> join T2 on ...</td>
 					<td title="MySQL" class="compat-yes">Yes</td>
 					<td title="Oracle" class="">?</td>
-					<td title="Postgres" class="">?</td>
+					<td title="Postgres" class="compat-yes">Yes</td>
 					<td title="SQLserver" class="compat-yes">Yes</td>
-					<td title="DB2" class="">?</td>
+					<td title="IBM DB2 v11" class="compat-yes">Yes</td>
 					<td title="SQLite" class="compat-yes">Yes</td>
 					<td title="Access" class="">?</td>
+					<td title="Informix v10-12" class="compat-no">Informix</td>
 					<td title="others" class=""></td>
-					<td></td>
+					<td title="standard"></td>
 				</tr>
 				<tr>
 					<td><s>... from T right outer join T2 on ...</s></td>
 					<td title="MySQL" class="compat-yes">Yes</td>
 					<td title="Oracle" class="">?</td>
-					<td title="Postgres" class="">?</td>
+					<td title="Postgres" class="compat-yes">Yes</td>
 					<td title="SQLserver" class="compat-yes">Yes</td>
-					<td title="DB2" class="">?</td>
+					<td title="IBM DB2 v11" class="compat-yes">Yes</td>
 					<td title="SQLite" class="compat-no">No</td>
 					<td title="Access" class="">?</td>
+					<td title="Informix v10-12" class="compat-no">Informix</td>
 					<td title="others" class=""></td>
-					<td></td>
+					<td title="standard"></td>
 				</tr>
 				<tr>
 					<td>... from T full <s>outer</s> join T2 on ...</td>
 					<td title="MySQL" class="compat-yes">Yes</td>
 					<td title="Oracle" class="">?</td>
-					<td title="Postgres" class="">?</td>
+					<td title="Postgres" class="compat-yes">Yes</td>
 					<td title="SQLserver" class="compat-yes">Yes</td>
-					<td title="DB2" class="">?</td>
+					<td title="IBM DB2 v11" class="compat-yes">Yes</td>
 					<td title="SQLite" class="compat-no">No</td>
 					<td title="Access" class="">?</td>
+					<td title="Informix v10-12" class="compat-no">Informix</td>
 					<td title="others" class=""></td>
-					<td></td>
+					<td title="standard"></td>
 				</tr>
 				<tr>
 					<td>... from T inner join T2 on ...</td>
 					<td title="MySQL" class="compat-yes">Yes</td>
 					<td title="Oracle" class="">?</td>
-					<td title="Postgres" class="">?</td>
+					<td title="Postgres" class="compat-yes">Yes</td>
 					<td title="SQLserver" class="compat-yes">Yes</td>
-					<td title="DB2" class="">?</td>
+					<td title="IBM DB2 v11" class="compat-yes">Yes</td>
 					<td title="SQLite" class="compat-yes">Yes</td>
 					<td title="Access" class="">?</td>
+					<td title="Informix v10-12" class="compat-no">Informix</td>
 					<td title="others" class=""></td>
-					<td></td>
+					<td title="standard"></td>
 				</tr>
 				<tr>
-					<td colspan="10">Paging syntax</th>
+					<td colspan="11">Paging syntax</th>
 				</tr>
 				<tr>
 					<td>select ... limit 5 offset 0</td>
@@ -136,11 +144,12 @@
 					<td title="Oracle" class="compat-no">No</td>
 					<td title="Postgres" class="compat-yes">Yes</td>
 					<td title="SQLserver" class="compat-no">No</td>
-					<td title="DB2" class="">?</td>
+					<td title="IBM DB2" class="">?</td>
 					<td title="SQLite" class="compat-yes">Yes</td>
 					<td title="Access" class="">?</td>
 					<td title="others" class=""></td>
-					<td></td>
+					<td title="others" class=""></td>
+					<td title="standard"></td>
 				</tr>
 				<tr>
 					<td><s>select ... limit 0, 5</s></td>
@@ -148,11 +157,12 @@
 					<td title="Oracle" class="compat-no">No</td>
 					<td title="Postgres" class="compat-no">No</td>
 					<td title="SQLserver" class="compat-no">No</td>
-					<td title="DB2" class="">?</td>
+					<td title="IBM DB2" class="">?</td>
 					<td title="SQLite" class="compat-no">No</td>
 					<td title="Access" class="">?</td>
 					<td title="others" class=""></td>
-					<td></td>
+					<td title="others" class=""></td>
+					<td title="standard"></td>
 				</tr>
 				<tr>
 					<td><s>select top(5) ...</s></td>
@@ -160,11 +170,12 @@
 					<td title="Oracle" class="compat-no">No</td>
 					<td title="Postgres" class="compat-no">No</td>
 					<td title="SQLserver" class="compat-yes">Yes</td>
-					<td title="DB2" class="">?</td>
+					<td title="IBM DB2" class="">?</td>
 					<td title="SQLite" class="compat-no">No</td>
 					<td title="Access" class="">?</td>
 					<td title="others" class=""></td>
-					<td></td>
+					<td title="others" class=""></td>
+					<td title="standard"></td>
 				</tr>
 				<tr>
 					<td>select ... order by X offset 1 rows fetch next 5 rows only</td>
@@ -172,11 +183,12 @@
 					<td title="since Oracle 12c" class="compat-ok">v12c+</td>
 					<td title="Postgres" class="compat-no">No</td>
 					<td title="SQLserver" class="compat-yes">Yes</td>
-					<td title="DB2" class="">?</td>
+					<td title="IBM DB2" class="">?</td>
 					<td title="SQLite" class="compat-no">No</td>
 					<td title="Access" class="">?</td>
 					<td title="others" class=""></td>
-					<td></td>
+					<td title="others" class=""></td>
+					<td title="standard"></td>
 				</tr>
 			</tbody>
 		</table>
