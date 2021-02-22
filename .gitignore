@@ -1,4 +1,3 @@
-.sass-cache/
-*.css.map
-*.sass.map
-*.scss.map
+thumbs.db
+desktop.ini
+.DS_Store

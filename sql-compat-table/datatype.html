@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>SQL compatibility table</title>
+	<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<header>
+		<img src="logo.png">
+		SQL &nbsp;
+		<a href="index.html">Syntax</a><a href="function.html">Functions</a><a href="#">Data types</a>
+		&nbsp; compatibility table
+		<div>
+			by <a href="https://github.com/nils85">Vince</a>
+			<span>Fork</span>
+		</div>
+	</header>
+	<main>
+		<p>
+			<span class="compat-yes"></span>Compatible
+			<span class="compat-ok"></span>Compatible with warning
+			<span class="compat-no"></span>Not compatible
+			<span class=""></span>Unknown
+		</p>
+		<table>
+			<thead>
+				<tr>
+					<th>Example of data type</th>
+					<th><b>SQL/PSM</b><br>MySQL<br>MariaDB</th>
+					<th><b>PL/SQL</b><br>Oracle<br>Database</th>
+					<th><b>PL/pgSQL</b><br>PostgreSQL</th>
+					<th><b>T-SQL</b><br>Microsoft<br>SQL Server</th>
+					<th><b>SQL PL</b><br>IBM<br>DB2</th>
+					<th><b>SQLite</b><br>(embedded)</th>
+					<th><b>Microsoft<br>Access</b><br>(embedded)</th>
+					<th><b>Other</b><br>database<br>systems</th>
+					<th><b>Other</b><br>database<br>systems</th>
+					<th>ISO/IEC<br>standard</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>varchar(255)</td>
+					<td title="MySQL" class="compat-yes">max 65535</td>
+					<td title="Oracle" class="compat-yes">Yes</td>
+					<td title="Postgres" class="compat-yes">Yes</td>
+					<td title="SQLserver" class="compat-yes">max 8000</td>
+					<td title="IBM DB2" class="compat-yes">max 32672</td>
+					<td title="SQLite" class="compat-yes">Yes</td>
+					<td title="Access" class="compat-yes">Yes</td>
+					<td title="Informix v10" class="compat-ok">Informix: max 255</td>
+					<td title="others" class=""></td>
+					<td title="standard">SQL-92</td>
+				</tr>
+				<tr>
+					<td colspan="11">Numbers</th>
+				</tr>
+				<tr>
+					<td>bigint</td>
+					<td title="MySQL" class="compat-yes">Yes</td>
+					<td title="Oracle" class="compat-no">number(19)</td>
+					<td title="Postgres" class="compat-yes">Yes</td>
+					<td title="SQLserver" class="compat-yes">Yes</td>
+					<td title="IBM DB2" class="compat-yes">Yes</td>
+					<td title="SQLite" class="compat-yes">Yes</td>
+					<td title="Access" class="">?</td>
+					<td title="others" class="compat-yes">Firebird Interbase Sybase</td>
+					<td title="others" class="compat-yes">Informix CUBRID</td>
+					<td title="standard">SQL:2003</td>
+				</tr>
+				<tr>
+					<td><s>dec(12,2)</s></td>
+					<td title="MySQL" class="compat-yes">Yes</td>
+					<td title="Oracle" class="">?</td>
+					<td title="Postgres" class="">?</td>
+					<td title="SQLserver" class="compat-yes">Yes</td>
+					<td title="IBM DB2" class="">?</td>
+					<td title="SQLite" class="compat-no">No</td>
+					<td title="Access" class="">?</td>
+					<td title="others" class=""></td>
+					<td title="others" class=""></td>
+					<td title="standard"></td>
+				</tr>
+				<tr>
+					<td>decimal(12,2)</td>
+					<td title="MySQL" class="compat-yes">Yes</td>
+					<td title="Oracle" class="compat-yes">Yes</td>
+					<td title="Postgres" class="compat-yes">Yes</td>
+					<td title="SQLserver" class="compat-yes">Yes</td>
+					<td title="IBM DB2" class="compat-yes">Yes</td>
+					<td title="SQLite" class="compat-yes">Yes</td>
+					<td title="Access" class="compat-yes">Yes</td>
+					<td title="Informix v10" class="compat-yes">Informix</td>
+					<td title="others" class=""></td>
+					<td title="standard">SQL-92</td>
+				</tr>
+				<tr>
+					<td>int</td>
+					<td title="MySQL" class="compat-yes">Yes</td>
+					<td title="Oracle" class="compat-yes">Yes</td>
+					<td title="Postgres" class="compat-yes">Yes</td>
+					<td title="SQLserver" class="compat-yes">Yes</td>
+					<td title="IBM DB2" class="compat-yes">Yes</td>
+					<td title="SQLite" class="compat-yes">Yes</td>
+					<td title="Access" class="compat-yes">Yes</td>
+					<td title="others" class="compat-yes">Informix & CUBRID</td>
+					<td title="others" class="compat-yes">Firebird Interbase Sybase</td>
+					<td title="standard">SQL-92</td>
+				</tr>
+				<tr>
+					<td>smallint</td>
+					<td title="MySQL" class="compat-yes">Yes</td>
+					<td title="Oracle" class="compat-yes">Yes</td>
+					<td title="Postgres" class="compat-yes">Yes</td>
+					<td title="SQLserver" class="compat-yes">Yes</td>
+					<td title="IBM DB2" class="compat-yes">Yes</td>
+					<td title="SQLite" class="compat-yes">Yes</td>
+					<td title="Access" class="compat-yes">Yes</td>
+					<td title="others" class="compat-yes">Informix & CUBRID</td>
+					<td title="others" class="compat-yes">Firebird & Sybase</td>
+					<td title="standard">SQL-92</td>
+				</tr>
+				<tr>
+					<td>tinyint</td>
+					<td title="MySQL" class="compat-yes">Yes</td>
+					<td title="Oracle" class="compat-no">No</td>
+					<td title="Postgres" class="compat-no">No</td>
+					<td title="SQLserver" class="compat-ok">unsigned</td>
+					<td title="IBM DB2" class="compat-no">No</td>
+					<td title="SQLite" class="compat-yes">Yes</td>
+					<td title="Access" class="">?</td>
+					<td title="others" class="compat-yes">Sybase (signed)</td>
+					<td title="others" class="compat-no">Firebird & CUBRID</td>
+					<td title="standard">SQL-92</td>
+				</tr>
+			</tbody>
+		</table>
+		<div>
+			Documentation:
+			<ul>
+				<li><a href="http://dev.mysql.com/doc" target="_blank">MySQL reference manual</a></li>
+				<li><a href="http://docs.oracle.com/en/database/database.html" target="_blank">Oracle Database PL/SQL language reference</a></li>
+				<li><a href="http://www.postgresql.org/docs" target="_blank">PostgreSQL manuals</a></li>
+				<li><a href="http://technet.microsoft.com/en-us/library/bb545450.aspx" target="_blank">Microsoft SQL Server technical documentation</a></li>
+				<li><a href="http://www.sqlite.org/docs.html" target="_blank">SQLite programming interfaces</a></li>
+				<li><a href="http://www.ibm.com/support/knowledgecenter/SSEPGG/welcome" target="_blank">IBM DB2 database reference</a></li>
+				<li><a href="http://www.firebirdsql.org/en/documentation" target="_blank">Firebird RDBMS reference manuals</a></li>
+				<li><a href="http://infocenter.sybase.com/help/index.jsp" target="_blank">SAP Sybase SQL Anywhere</a></li>
+				<li><a href="http://www.ibm.com/support/knowledgecenter/SSGU8G/welcomeIfxServers" target="_blank">IBM Informix</a></li>
+				<li><a href="http://publib.boulder.ibm.com/infocenter/idshelp/v10/index.jsp" target="_blank">IBM Informix v10</a></li>
+				<li><a href="http://www.cubrid.org/manuals" target="_blank">CUBRID</a></li>
+			</ul>
+			SQL standard publications:
+			<ul>
+				<li><a href="http://en.wikipedia.org/wiki/SQL:2016" target="_blank">ISO/IEC SQL:2016</a></li>
+				<li><a href="http://en.wikipedia.org/wiki/SQL:2011" target="_blank">ISO/IEC SQL:2011</a></li>
+				<li><a href="http://en.wikipedia.org/wiki/SQL:2008" target="_blank">ISO/IEC SQL:2008</a></li>
+				<li><a href="http://www.wiscorp.com/sql200n.zip">ISO/IEC SQL:2008 (draft)</a></li>
+				<li><a href="http://en.wikipedia.org/wiki/SQL:2006" target="_blank">ISO/IEC SQL:2006</a></li>
+				<li><a href="http://en.wikipedia.org/wiki/SQL:2003" target="_blank">ISO/IEC SQL:2003</a></li>
+				<li><a href="http://en.wikipedia.org/wiki/SQL:1999" target="_blank">ISO/IEC SQL:1999</a></li>
+				<li><a href="http://www.contrib.andrew.cmu.edu/~shadow/sql/sql1992.txt" target="_blank">ANSI SQL-92</a></li>
+				<li><a href="https://archive.org/stream/federalinformati1271nati/" target="_blank">FIPS SQL-89</a></li>
+			</ul>
+		</div>
+	</main>
+</body>
+</html>

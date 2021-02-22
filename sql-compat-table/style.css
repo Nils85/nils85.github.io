@@ -1,0 +1,110 @@
+html {
+	font-size: 14px}
+
+body {
+	font-family: "Open Sans", sans-serif;
+	font-weight: 100;
+	margin: 0}
+
+header {
+	color: #eee;
+	font-size: 1.25rem;
+	background-color: #454545}
+
+header img {
+	vertical-align: middle;
+	width: 40px;
+	height: 40px;
+	margin: 7px 18px 7px 12px}
+
+header a {
+	color: white}
+
+header > a {
+	margin-right: 1px;
+	padding: 7px;
+	text-decoration: none;
+	background-color: #888}
+
+header > a:hover {
+	background-color: #999}
+
+header > a[href="#"] {
+	font-weight: 200;
+	color: black;
+	background-color: #eee}
+
+header div {
+	padding: 18px 40px;
+	font-size: 0.75rem;
+	float: right}
+
+/* GitHub button */
+header div span {
+	margin: 9px;
+	padding: 2px 5px;
+	font-weight: bold;
+	background-color: #eee;
+	background-image: linear-gradient(to bottom, #fcfcfc 0, #eee 100%);
+	background-repeat: no-repeat;
+	border: 1px solid #d5d5d5;
+	color: #333;
+	cursor: pointer;
+	border-radius: 3px}
+
+main p,
+main div {
+	margin: 25px}
+
+main p {
+	text-align: center}
+
+main p span {
+	font-size: 0.75rem;
+	padding: 2px 9px;
+	margin: 0 4px 0 9px}
+
+main p span:last-child {
+	background-color: #eee}
+
+main table {
+	background-color: white;
+	margin: 40px 20px}
+
+main table thead,
+main table tbody {
+	background-color: #eee}
+
+main table th,
+main table td {
+	text-align: center}
+
+main table th {
+	vertical-align: top;
+	font-weight: 100}
+
+main table th:first-child {
+	vertical-align: middle}
+
+main table td {
+	font-size: 0.75rem}
+
+main table td:first-child {
+	font-size: 1rem;
+	text-align: left}
+
+main table td[colspan] {
+	font-weight: bold;
+	text-align: left}
+
+.compat-yes {
+	color: white;
+	background-color: #44ab44}  /* green */
+
+.compat-ok {
+	color: white;
+	background-color: #df8020}  /* orange */
+
+.compat-no {
+	color: white;
+	background-color: #e11}  /* red */
