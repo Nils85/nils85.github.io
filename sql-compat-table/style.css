@@ -83,7 +83,8 @@ main table th {
 	vertical-align: top;
 	font-weight: 100}
 
-main table th:first-child {
+main table th:first-child,
+main table th:last-child {
 	vertical-align: middle}
 
 main table td {
