@@ -12,9 +12,10 @@
 		<a href="index.html">Syntax</a><a href="function.html">Functions</a><a href="#">Data types</a>
 		&nbsp; compatibility table
 		<div>
-			inspired by the <a href="https://kangax.github.io/compat-table/es6">ECMAScript compatibility table</a>
-			& created by <a href="https://github.com/nils85">Vince</a>
-			<span>Fork</span>
+			inspired by <a href="https://kangax.github.io/compat-table/es6" target="_blank">ES compat table</a>
+			& created by <a href="https://github.com/nils85" target="_blank">Vince</a>
+			<a class="button" href="https://github.com/Nils85/nils85.github.io" target="_blank">Fork project</a>
+			<a class="button" href="https://github.com/Nils85/nils85.github.io/issues" target="_blank">Report mistake</a>
 		</div>
 	</header>
 	<main>
@@ -32,17 +33,18 @@
 					<th><b>PL/SQL</b><br>Oracle<br>Database</th>
 					<th><b>PL/pgSQL</b><br>PostgreSQL</th>
 					<th><b>T-SQL</b><br>Microsoft<br>SQL Server</th>
-					<th><b>SQL PL</b><br>IBM<br>DB2</th>
+					<th><b>SQL PL</b><br>IBM DB2</th>
 					<th><b>SQLite</b><br>(embedded)</th>
 					<th><b>Microsoft<br>Access</b><br>(embedded)</th>
 					<th colspan="2"><b>Other</b><br>database<br>systems</th>
 					<th>ANSI/ISO<br>standard</th>
+					<th>Universal alternative</th>
 				</tr>
 			</thead>
 			<tbody>
 				<!-- Empty row:
 				<tr>
-					<td>new data type...</td>
+					<td>NEW DATA TYPE</td>
 					<td title="MySQL" class="">?</td>
 					<td title="Oracle" class="">?</td>
 					<td title="Postgres" class="">?</td>
@@ -53,10 +55,11 @@
 					<td title="others" class=""></td>
 					<td title="others" class=""></td>
 					<td title="standard"></td>
+					<td title="alternative"></td>
 				</tr>
 				-->
 				<tr>
-					<td>varchar(255)</td>
+					<td>VARCHAR(255)</td>
 					<td title="MySQL" class="compat-yes">max 65535</td>
 					<td title="Oracle" class="compat-yes">Yes</td>
 					<td title="Postgres" class="compat-yes">Yes</td>
@@ -67,12 +70,13 @@
 					<td title="Informix v10" class="compat-ok">Informix: max 255</td>
 					<td title="others" class=""></td>
 					<td title="standard">SQL-92</td>
+					<td title="alternative"></td>
 				</tr>
 				<tr>
-					<td colspan="11">Numbers</th>
+					<td colspan="12">Numbers</th>
 				</tr>
 				<tr>
-					<td>bigint</td>
+					<td>BIGINT</td>
 					<td title="MySQL" class="compat-yes">Yes</td>
 					<td title="Oracle" class="compat-no">number(19)</td>
 					<td title="Postgres" class="compat-yes">Yes</td>
@@ -83,9 +87,10 @@
 					<td title="others" class="compat-yes">Firebird & Interbase</td>
 					<td title="others" class="compat-yes">Sybase Informix CUBRID</td>
 					<td title="standard">SQL:2003</td>
+					<td title="alternative"></td>
 				</tr>
 				<tr>
-					<td><s>dec(12,2)</s></td>
+					<td><s>DEC(12,2)</s></td>
 					<td title="MySQL" class="compat-yes">Yes</td>
 					<td title="Oracle" class="">?</td>
 					<td title="Postgres" class="">?</td>
@@ -96,9 +101,10 @@
 					<td title="others" class=""></td>
 					<td title="others" class=""></td>
 					<td title="standard"></td>
+					<td title="alternative">DECIMAL(12,2)</td>
 				</tr>
 				<tr>
-					<td>decimal(12,2)</td>
+					<td>DECIMAL(12,2)</td>
 					<td title="MySQL" class="compat-yes">Yes</td>
 					<td title="Oracle" class="compat-yes">Yes</td>
 					<td title="Postgres" class="compat-yes">Yes</td>
@@ -109,9 +115,10 @@
 					<td title="Informix v10" class="compat-yes">Informix</td>
 					<td title="others" class=""></td>
 					<td title="standard">SQL-92</td>
+					<td title="alternative"></td>
 				</tr>
 				<tr>
-					<td>int</td>
+					<td>INT</td>
 					<td title="MySQL" class="compat-yes">Yes</td>
 					<td title="Oracle" class="compat-yes">Yes</td>
 					<td title="Postgres" class="compat-yes">Yes</td>
@@ -122,9 +129,10 @@
 					<td title="others" class="compat-yes">Firebird & Interbase</td>
 					<td title="others" class="compat-yes">Informix CUBRID Sybase</td>
 					<td title="standard">SQL-92</td>
+					<td title="alternative"></td>
 				</tr>
 				<tr>
-					<td>smallint</td>
+					<td>SMALLINT</td>
 					<td title="MySQL" class="compat-yes">Yes</td>
 					<td title="Oracle" class="compat-yes">Yes</td>
 					<td title="Postgres" class="compat-yes">Yes</td>
@@ -135,9 +143,10 @@
 					<td title="others" class="compat-yes">Informix & CUBRID</td>
 					<td title="others" class="compat-yes">Firebird & Sybase</td>
 					<td title="standard">SQL-92</td>
+					<td title="alternative"></td>
 				</tr>
 				<tr>
-					<td>tinyint</td>
+					<td>TINYINT</td>
 					<td title="MySQL" class="compat-yes">Yes</td>
 					<td title="Oracle" class="compat-no">No</td>
 					<td title="Postgres" class="compat-no">No</td>
@@ -148,6 +157,7 @@
 					<td title="others" class="compat-yes">Sybase (signed)</td>
 					<td title="others" class="compat-no">Firebird & CUBRID</td>
 					<td title="standard">SQL-92</td>
+					<td title="alternative"></td>
 				</tr>
 			</tbody>
 		</table>

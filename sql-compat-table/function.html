@@ -12,9 +12,10 @@
 		<a href="index.html">Syntax</a><a href="#">Functions</a><a href="datatype.html">Data types</a>
 		&nbsp; compatibility table
 		<div>
-			inspired by the <a href="https://kangax.github.io/compat-table/es6">ECMAScript compatibility table</a>
-			& created by <a href="https://github.com/nils85">Vince</a>
-			<span>Fork</span>
+			inspired by <a href="https://kangax.github.io/compat-table/es6" target="_blank">ES compat table</a>
+			& created by <a href="https://github.com/nils85" target="_blank">Vince</a>
+			<a class="button" href="https://github.com/Nils85/nils85.github.io" target="_blank">Fork project</a>
+			<a class="button" href="https://github.com/Nils85/nils85.github.io/issues" target="_blank">Report mistake</a>
 		</div>
 	</header>
 	<main>
@@ -32,17 +33,18 @@
 					<th><b>PL/SQL</b><br>Oracle<br>Database</th>
 					<th><b>PL/pgSQL</b><br>PostgreSQL</th>
 					<th><b>T-SQL</b><br>Microsoft<br>SQL Server</th>
-					<th><b>SQL PL</b><br>IBM<br>DB2</th>
+					<th><b>SQL PL</b><br>IBM DB2</th>
 					<th><b>SQLite</b><br>(embedded)</th>
 					<th><b>Microsoft<br>Access</b><br>(embedded)</th>
 					<th colspan="2"><b>Other</b><br>database<br>systems</th>
 					<th>ANSI/ISO<br>standard</th>
+					<th>Universal alternative</th>
 				</tr>
 			</thead>
 			<tbody>
 				<!-- Empty row:
 				<tr>
-					<td>new function(X,Y,Z)</td>
+					<td>NEW FUNCTION(x,y,z)</td>
 					<td title="MySQL" class="">?</td>
 					<td title="Oracle" class="">?</td>
 					<td title="Postgres" class="">?</td>
@@ -53,10 +55,11 @@
 					<td title="others" class=""></td>
 					<td title="others" class=""></td>
 					<td title="standard"></td>
+					<td title="alternative"></td>
 				</tr>
 				-->
 				<tr>
-					<td>avg(X)</td>
+					<td>AVG(x)</td>
 					<td title="MySQL" class="compat-yes">Yes</td>
 					<td title="Oracle" class="compat-yes">Yes</td>
 					<td title="Postgres" class="compat-yes">Yes</td>
@@ -64,9 +67,80 @@
 					<td title="IBM DB2" class="compat-yes">Yes</td>
 					<td title="SQLite 3" class="compat-yes">Yes</td>
 					<td title="Access" class="compat-yes">Yes</td>
-					<td title="others" class=""></td>
+					<td title="others" class="compat-yes">Firebird & Interbase</td>
+					<td title="others" class="compat-yes">Sybase Informix CUBRID</td>
+					<td title="standard">SQL-92</td>
+					<td title="alternative"></td>
+				</tr>
+				<tr>
+					<td>COALESCE(x,y...)</td>
+					<td title="MySQL 3.23.3" class="compat-yes">Yes</td>
+					<td title="Oracle 9.0.1" class="compat-yes">Yes</td>
+					<td title="Postgres 6.5" class="compat-yes">Yes</td>
+					<td title="SQLserver 2000" class="compat-yes">Yes</td>
+					<td title="IBM DB2 v8.2" class="compat-yes">Yes</td>
+					<td title="SQLite 3" class="compat-yes">Yes</td>
+					<td title="Access 2013" class="compat-ok">since v2013</td>
+					<td title="others" class="compat-yes">Firebird Interbase Sybase CUBRID</td>
+					<td title="others" class="compat-no">Informix: NVL(x,y)</td>
+					<td title="standard">SQL-92</td>
+					<td title="alternative"></td>
+				</tr>
+				<tr>
+					<td>COUNT(x)</td>
+					<td title="MySQL" class="compat-yes">Yes</td>
+					<td title="Oracle" class="compat-yes">Yes</td>
+					<td title="Postgres" class="compat-yes">Yes</td>
+					<td title="SQLserver" class="compat-yes">Yes</td>
+					<td title="IBM DB2" class="compat-yes">Yes</td>
+					<td title="SQLite 3" class="compat-yes">Yes</td>
+					<td title="Access" class="compat-yes">Yes</td>
+					<td title="others" class="compat-yes">All</td>
 					<td title="others" class=""></td>
 					<td title="standard">SQL-92</td>
+					<td title="alternative"></td>
+				</tr>
+				<tr>
+					<td><s>IFNULL(x,y)</s></td>
+					<td title="MySQL 4" class="compat-yes">Yes</td>
+					<td title="Oracle" class="compat-no">No</td>
+					<td title="Postgres" class="compat-no">v6.5 only</td>
+					<td title="SQLserver" class="compat-no">No</td>
+					<td title="IBM DB2" class="">?</td>
+					<td title="SQLite 3" class="compat-yes">Yes</td>
+					<td title="Access" class="compat-no">NZ(x,y)</td>
+					<td title="CUBRID v8.3" class="compat-yes">CUBRID</td>
+					<td title="others" class=""></td>
+					<td title="standard"></td>
+					<td title="alternative">COALESCE(x,y)</td>
+				</tr>
+				<tr>
+					<td><s>ISNULL(x)</s></td>
+					<td title="MySQL" class="compat-yes">Yes</td>
+					<td title="Oracle" class="compat-no">No</td>
+					<td title="Postgres" class="compat-no">No</td>
+					<td title="SQLserver" class="compat-no">ISNULL(x,y)</td>
+					<td title="IBM DB2" class="">?</td>
+					<td title="SQLite 3" class="compat-no">No</td>
+					<td title="Access" class="">?</td>
+					<td title="CUBRID v9" class="compat-yes">CUBRID</td>
+					<td title="others" class=""></td>
+					<td title="standard"></td>
+					<td title="alternative">... WHERE x IS [NOT] NULL</td>
+				</tr>
+				<tr>
+					<td><s>LEFT(x,y)</s></td>
+					<td title="MySQL" class="compat-yes">Yes</td>
+					<td title="Oracle" class="compat-no">No</td>
+					<td title="Postgres 9.1" class="compat-yes">Yes</td>
+					<td title="SQLserver 2000" class="compat-yes">Yes</td>
+					<td title="IBM DB2" class="">?</td>
+					<td title="SQLite 3" class="compat-no">No</td>
+					<td title="Access" class="">?</td>
+					<td title="Firebird 2.1" class="compat-yes">Firebird</td>
+					<td title="others" class=""></td>
+					<td title="standard"></td>
+					<td title="alternative">SUBSTR(x,y)</td>
 				</tr>
 			</tbody>
 		</table>
