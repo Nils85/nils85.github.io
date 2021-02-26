@@ -98,20 +98,17 @@ main table td[colspan] {
 	font-weight: bold;
 	text-align: left}
 
-main table td:last-child {
-	font-style: italic}
-
 main table td:hover s {
 	text-decoration: none}
 
-main .compat-yes {
+main .green {
 	color: white;
-	background-color: #44ab44}  /* green */
+	background-color: #44ab44}
 
-main .compat-ok {
+main .orange {
 	color: white;
-	background-color: #df8020}  /* orange */
+	background-color: #df8020}
 
-main .compat-no {
+main .red {
 	color: white;
-	background-color: #e11}  /* red */
+	background-color: #e11}
