@@ -1,7 +1,7 @@
 // ECMAScript 5
 "use strict";
 
-// Automatic table cell background
+// Automatic background color for table cells
 var elements = document.getElementsByTagName("td");
 
 for (var i = 0; i < elements.length; ++i)
@@ -21,8 +21,5 @@ for (var i = 0; i < elements.length; ++i)
 // Open all links in a new tab except for the menu
 elements = document.getElementsByTagName("a");
 
-for (var i = 0; i < elements.length; ++i)
-{
-	if (i > 2)
-	{ elements[i].target = "_blank"; }
-}
+for (var i = 3; i < elements.length; ++i)
+{ elements[i].target = "_blank"; }
