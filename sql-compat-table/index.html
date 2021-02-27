@@ -60,7 +60,35 @@
 				</tr>
 				-->
 				<tr>
-					<td>SELECT * FROM t</td>
+					<td>INSERT INTO ... SELECT ...</td>
+					<td title="MySQL">Yes</td>
+					<td title="Oracle">?</td>
+					<td title="Postgres">Yes</td>
+					<td title="SQLserver">Yes</td>
+					<td title="IBM DB2">?</td>
+					<td title="SQLite 3">Yes</td>
+					<td title="Access">?</td>
+					<td title="others" class=""></td>
+					<td title="others" class=""></td>
+					<td title="standard"></td>
+					<td title="alternative"></td>
+				</tr>
+				<tr>
+					<td>INSERT INTO ... VALUE<b>S</b> ...</td>
+					<td title="MySQL">Yes</td>
+					<td title="Oracle">?</td>
+					<td title="Postgres">Yes</td>
+					<td title="SQLserver">Yes</td>
+					<td title="IBM DB2">?</td>
+					<td title="SQLite 3">Yes</td>
+					<td title="Access">?</td>
+					<td title="others" class=""></td>
+					<td title="others" class=""></td>
+					<td title="standard"></td>
+					<td title="alternative"></td>
+				</tr>
+				<tr>
+					<td>SELECT * FROM tab</td>
 					<td title="MySQL">Yes</td>
 					<td title="Oracle">Yes</td>
 					<td title="Postgres">Yes</td>
@@ -74,7 +102,7 @@
 					<td title="alternative"></td>
 				</tr>
 				<tr>
-					<td>DELETE FROM t</td>
+					<td>DELETE FROM tab</td>
 					<td title="MySQL">Yes</td>
 					<td title="Oracle">?</td>
 					<td title="Postgres">Yes</td>
@@ -88,10 +116,94 @@
 					<td title="alternative"></td>
 				</tr>
 				<tr>
+					<td>... WHERE ... AND ... OR ...</td>
+					<td title="MySQL">Yes</td>
+					<td title="Oracle">?</td>
+					<td title="Postgres">?</td>
+					<td title="SQLserver">Yes</td>
+					<td title="IBM DB2">?</td>
+					<td title="SQLite 3">Yes</td>
+					<td title="Access">?</td>
+					<td title="others" class=""></td>
+					<td title="others" class=""></td>
+					<td title="standard"></td>
+					<td title="alternative"></td>
+				</tr>
+				<tr>
+					<td>... WHERE x BETWEEN 1 AND 9</td>
+					<td title="MySQL">Yes</td>
+					<td title="Oracle">?</td>
+					<td title="Postgres">?</td>
+					<td title="SQLserver">Yes</td>
+					<td title="IBM DB2">?</td>
+					<td title="SQLite 3">?</td>
+					<td title="Access">?</td>
+					<td title="others" class=""></td>
+					<td title="others" class=""></td>
+					<td title="standard"></td>
+					<td title="alternative"></td>
+				</tr>
+				<tr>
+					<td>... WHERE x IN (...)</td>
+					<td title="MySQL">Yes</td>
+					<td title="Oracle">?</td>
+					<td title="Postgres">?</td>
+					<td title="SQLserver">Yes</td>
+					<td title="IBM DB2">?</td>
+					<td title="SQLite 3">?</td>
+					<td title="Access">?</td>
+					<td title="others" class=""></td>
+					<td title="others" class=""></td>
+					<td title="standard"></td>
+					<td title="alternative"></td>
+				</tr>
+				<tr>
+					<td>... GROUP BY ...</td>
+					<td title="MySQL">Yes</td>
+					<td title="Oracle">?</td>
+					<td title="Postgres">?</td>
+					<td title="SQLserver">Yes</td>
+					<td title="IBM DB2">?</td>
+					<td title="SQLite 3">?</td>
+					<td title="Access">?</td>
+					<td title="others" class=""></td>
+					<td title="others" class=""></td>
+					<td title="standard"></td>
+					<td title="alternative"></td>
+				</tr>
+				<tr>
+					<td>... ORDER BY ...</td>
+					<td title="MySQL">Yes</td>
+					<td title="Oracle">?</td>
+					<td title="Postgres">?</td>
+					<td title="SQLserver">Yes</td>
+					<td title="IBM DB2">?</td>
+					<td title="SQLite 3">Yes</td>
+					<td title="Access">?</td>
+					<td title="others" class=""></td>
+					<td title="others" class=""></td>
+					<td title="standard"></td>
+					<td title="alternative"></td>
+				</tr>
+				<tr>
+					<td>UPDATE tab SET col1 = val1, col2 = val2</td>
+					<td title="MySQL">Yes</td>
+					<td title="Oracle">Yes</td>
+					<td title="Postgres">Yes</td>
+					<td title="SQLserver">Yes</td>
+					<td title="IBM DB2">?</td>
+					<td title="SQLite 3">Yes</td>
+					<td title="Access">?</td>
+					<td title="others" class="green">Firebird</td>
+					<td title="others" class=""></td>
+					<td title="standard"></td>
+					<td title="alternative"></td>
+				</tr>
+				<tr>
 					<td colspan="12">Table modifications</th>
 				</tr>
 				<tr>
-					<td>CREATE TABLE t ...</td>
+					<td>CREATE TABLE name ...</td>
 					<td title="MySQL">Yes</td>
 					<td title="Oracle">?</td>
 					<td title="Postgres">Yes</td>
@@ -105,7 +217,7 @@
 					<td title="alternative"></td>
 				</tr>
 				<tr>
-					<td>DROP TABLE t</td>
+					<td>DROP TABLE name</td>
 					<td title="MySQL">Yes</td>
 					<td title="Oracle">?</td>
 					<td title="Postgres">Yes</td>
@@ -119,7 +231,7 @@
 					<td title="alternative"></td>
 				</tr>
 				<tr>
-					<td><s>TRUNCATE TABLE t</s></td>
+					<td><s>TRUNCATE TABLE name</s></td>
 					<td title="MySQL">Yes</td>
 					<td title="Oracle">Yes</td>
 					<td title="Postgres">Yes</td>
@@ -130,13 +242,13 @@
 					<td title="others" class="red">Firebird</td>
 					<td title="others" class=""></td>
 					<td title="standard">SQL:2008</td>
-					<td title="alternative">DROP TABLE t; CREATE TABLE t ...</td>
+					<td title="alternative">DROP TABLE tab; CREATE TABLE tab ...</td>
 				</tr>
 				<tr>
 					<td colspan="12">Join syntax</th>
 				</tr>
 				<tr>
-					<td>... FROM t LEFT JOIN t2 ON ...</td>
+					<td>... FROM tab LEFT JOIN tab2 ON ...</td>
 					<td title="MySQL">Yes</td>
 					<td title="Oracle">?</td>
 					<td title="Postgres">Yes</td>
@@ -150,7 +262,7 @@
 					<td title="alternative"></td>
 				</tr>
 				<tr>
-					<td><s>... FROM t RIGHT JOIN t2 ON ...</s></td>
+					<td><s>... FROM tab RIGHT JOIN tab2 ON ...</s></td>
 					<td title="MySQL">Yes</td>
 					<td title="Oracle">?</td>
 					<td title="Postgres">Yes</td>
@@ -161,10 +273,10 @@
 					<td title="Informix v10-12" class="red">Informix</td>
 					<td title="others" class=""></td>
 					<td title="standard"></td>
-					<td title="alternative">... FROM t LEFT JOIN t2 ON ...</td>
+					<td title="alternative">... FROM tab LEFT JOIN tab2 ON ...</td>
 				</tr>
 				<tr>
-					<td>... FROM t FULL OUTER JOIN t2 ON ...</td>
+					<td>... FROM tab FULL OUTER JOIN tab2 ON ...</td>
 					<td title="MySQL">Yes</td>
 					<td title="Oracle">?</td>
 					<td title="Postgres">Yes</td>
@@ -178,7 +290,7 @@
 					<td title="alternative"></td>
 				</tr>
 				<tr>
-					<td>... FROM t INNER JOIN t2 ON ...</td>
+					<td>... FROM tab INNER JOIN tab2 ON ...</td>
 					<td title="MySQL">Yes</td>
 					<td title="Oracle">?</td>
 					<td title="Postgres">Yes</td>
@@ -237,7 +349,7 @@
 					<td title="alternative"></td>
 				</tr>
 				<tr>
-					<td>SELECT ... ORDER BY c OFFSET 0 ROWS FETCH NEXT 5 ROWS ONLY</td>
+					<td>SELECT ... ORDER BY col OFFSET 0 ROWS FETCH NEXT 5 ROWS ONLY</td>
 					<td title="MySQL">No</td>
 					<td title="Oracle 12c" class="green">since v12c</td>
 					<td title="Postgres">No</td>
@@ -291,7 +403,12 @@
 					<a href="https://www.postgresql.org/docs/10/sql.html">v10</a>
 					<a href="https://www.postgresql.org/docs/9.6/sql.html">v9.6</a>
 				</li>
-				<li><a href="http://technet.microsoft.com/en-us/library/bb545450.aspx">Microsoft SQL Server technical documentation</a></li>
+				<li>
+					<a href="https://technet.microsoft.com/en-us/library/bb545450.aspx">Microsoft SQL Server</a>:
+					<a href="https://docs.microsoft.com/en-us/sql/t-sql/queries/queries?view=sql-server-ver15">2019</a>
+					<a href="https://docs.microsoft.com/en-us/sql/t-sql/language-reference?view=sql-server-2016">2016</a>
+					<a href="https://docs.microsoft.com/en-us/previous-versions/sql/sql-server-2008-r2/bb510741(v=sql.105)">2008 R2</a>
+				</li>
 				<li>
 					<a href="https://www.sqlite.org/docs.html">SQLite</a>:
 					<a href="https://www.sqlite.org/lang.html">v3</a>
