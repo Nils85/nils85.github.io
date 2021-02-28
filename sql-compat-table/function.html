@@ -36,8 +36,7 @@
 					<th><b>T-SQL</b><br>Microsoft<br>SQL Server</th>
 					<th><b>SQL PL</b><br>IBM DB2</th>
 					<th><b>SQLite</b><br>(embedded)</th>
-					<th><b>Microsoft<br>Access</b><br>(embedded)</th>
-					<th colspan="2"><b>Other</b><br>database<br>systems</th>
+					<th colspan="2"><b>Other</b><br>database systems</th>
 					<th>ANSI/ISO<br>standard</th>
 					<th>Universal alternative</th>
 				</tr>
@@ -52,7 +51,6 @@
 					<td title="SQLserver">?</td>
 					<td title="IBM DB2">?</td>
 					<td title="SQLite 3">?</td>
-					<td title="Access">?</td>
 					<td title="others" class=""></td>
 					<td title="others" class=""></td>
 					<td title="standard"></td>
@@ -67,8 +65,7 @@
 					<td title="SQLserver">Yes</td>
 					<td title="IBM DB2">Yes</td>
 					<td title="SQLite 3">Yes</td>
-					<td title="Access">Yes</td>
-					<td title="others" class="green">Firebird & Interbase</td>
+					<td title="Microsoft Access, Firebird & Interbase" class="green">Access Firebird Interbase</td>
 					<td title="others" class="green">Sybase Informix CUBRID</td>
 					<td title="standard">SQL-92</td>
 					<td title="alternative"></td>
@@ -81,7 +78,6 @@
 					<td title="SQLserver">No</td>
 					<td title="IBM DB2">?</td>
 					<td title="SQLite 3">No</td>
-					<td title="Access">?</td>
 					<td title="others" class="green">Firebird</td>
 					<td title="others" class=""></td>
 					<td title="standard">SQL-92</td>
@@ -95,7 +91,6 @@
 					<td title="SQLserver">No</td>
 					<td title="IBM DB2">?</td>
 					<td title="SQLite 3">No</td>
-					<td title="Access">?</td>
 					<td title="others" class=""></td>
 					<td title="others" class=""></td>
 					<td title="standard">SQL-92</td>
@@ -109,8 +104,7 @@
 					<td title="SQLserver 2000">Yes</td>
 					<td title="IBM DB2 v8.2">Yes</td>
 					<td title="SQLite 3">Yes</td>
-					<td title="Access 2013" class="orange">since v2013</td>
-					<td title="others" class="green">Firebird Interbase Sybase CUBRID</td>
+					<td title="Microsoft Access 2013, Sybase, CUBRID, Firebird & Interbase" class="green">Access Firebird Interbase Sybase CUBRID</td>
 					<td title="others" class="red">Informix: NVL(x,y)</td>
 					<td title="standard">SQL-92</td>
 					<td title="alternative"></td>
@@ -123,9 +117,8 @@
 					<td title="SQLserver">Yes</td>
 					<td title="IBM DB2">Yes</td>
 					<td title="SQLite 3">Yes</td>
-					<td title="Access">Yes</td>
-					<td title="others" class="green">All</td>
-					<td title="others" class=""></td>
+					<td title="others" class="green">Microsoft Access</td>
+					<td title="others" class="green">and all others...</td>
 					<td title="standard">SQL-92</td>
 					<td title="alternative"></td>
 				</tr>
@@ -137,9 +130,8 @@
 					<td title="SQLserver">No</td>
 					<td title="IBM DB2">?</td>
 					<td title="SQLite 3">Yes</td>
-					<td title="Access" class="red">NZ(x,y)</td>
 					<td title="CUBRID v8.3" class="green">CUBRID</td>
-					<td title="others" class=""></td>
+					<td title="others" class="red">Microsoft Access: NZ(x,y)</td>
 					<td title="standard"></td>
 					<td title="alternative">COALESCE(x,y)</td>
 				</tr>
@@ -151,25 +143,23 @@
 					<td title="SQLserver" class="red">ISNULL(x,y)</td>
 					<td title="IBM DB2">?</td>
 					<td title="SQLite 3">No</td>
-					<td title="Access">?</td>
 					<td title="CUBRID v9" class="green">CUBRID</td>
 					<td title="others" class=""></td>
 					<td title="standard"></td>
-					<td title="alternative">... WHERE x IS [NOT] NULL</td>
+					<td title="alternative">... WHERE x IS NULL</td>
 				</tr>
 				<tr>
-					<td><s>LEFT(x,y)</s></td>
+					<td>LEFT(x,y)</td>
 					<td title="MySQL">Yes</td>
 					<td title="Oracle">No</td>
 					<td title="Postgres 9.1">Yes</td>
 					<td title="SQLserver 2000">Yes</td>
 					<td title="IBM DB2">?</td>
 					<td title="SQLite 3">No</td>
-					<td title="Access">?</td>
 					<td title="Firebird 2.1" class="green">Firebird</td>
 					<td title="others" class=""></td>
 					<td title="standard"></td>
-					<td title="alternative">SUBSTR(x,y)</td>
+					<td title="alternative"></td>
 				</tr>
 				<tr>
 					<td>LEN(x)</td>
@@ -179,11 +169,10 @@
 					<td title="SQLserver">Yes</td>
 					<td title="IBM DB2">?</td>
 					<td title="SQLite 3">No</td>
-					<td title="Access">Yes</td>
-					<td title="others" class=""></td>
+					<td title="others" class="green">Microsoft Access</td>
 					<td title="others" class=""></td>
 					<td title="standard"></td>
-					<td title="alternative"></td>
+					<td title="alternative">... WHERE x LIKE '_%'</td>
 				</tr>
 				<tr>
 					<td>LENGTH(x)</td>
@@ -193,8 +182,85 @@
 					<td title="SQLserver">No</td>
 					<td title="IBM DB2 v8.2">Yes</td>
 					<td title="SQLite 3">Yes</td>
-					<td title="Access">No</td>
 					<td title="others" class="red">Firebird</td>
+					<td title="others" class="red">Microsoft Access</td>
+					<td title="standard"></td>
+					<td title="alternative">... WHERE x LIKE '_%'</td>
+				</tr>
+				<tr>
+					<td>MAX(x)</td>
+					<td title="MySQL">Yes</td>
+					<td title="Oracle">Yes</td>
+					<td title="Postgres">Yes</td>
+					<td title="SQLserver">Yes</td>
+					<td title="IBM DB2">Yes</td>
+					<td title="SQLite 3">Yes</td>
+					<td title="Microsoft Access, Firebird & Interbase" class="green">Access Firebird Interbase</td>
+					<td title="others" class="green">Sybase Informix CUBRID</td>
+					<td title="standard">SQL-92</td>
+					<td title="alternative"></td>
+				</tr>
+				<tr>
+					<td>MIN(x)</td>
+					<td title="MySQL">Yes</td>
+					<td title="Oracle">Yes</td>
+					<td title="Postgres">Yes</td>
+					<td title="SQLserver">Yes</td>
+					<td title="IBM DB2">Yes</td>
+					<td title="SQLite 3">Yes</td>
+					<td title="Microsoft Access, Firebird & Interbase" class="green">Access Firebird Interbase</td>
+					<td title="others" class="green">Sybase Informix CUBRID</td>
+					<td title="standard">SQL-92</td>
+					<td title="alternative"></td>
+				</tr>
+				<tr>
+					<td>NULLIF(x,y)</td>
+					<td title="MySQL 3.23.15">Yes</td>
+					<td title="Oracle 9i">Yes</td>
+					<td title="Postgres 7">Yes</td>
+					<td title="SQLserver 2000">Yes</td>
+					<td title="IBM DB2 v8.2">Yes</td>
+					<td title="SQLite 3">Yes</td>
+					<td title="Firebird 1.5" class="green">Firebird</td>
+					<td title="CUBRID 8.2.1" class="green">CUBRID</td>
+					<td title="standard">SQL-92</td>
+					<td title="alternative"></td>
+				</tr>
+				<tr>
+					<td>NVL(x,y)</td>
+					<td title="MySQL">No</td>
+					<td title="Oracle">Yes</td>
+					<td title="Postgres">No</td>
+					<td title="SQLserver">No</td>
+					<td title="IBM DB2 v9.5">Yes</td>
+					<td title="SQLite 3">No</td>
+					<td title="Microsoft Access, Sybase, Firebird & Interbase" class="red">Access Firebird Interbase Sybase</td>
+					<td title="Informix v10 & CUBRID v8.2.1" class="green">Informix & CUBRID</td>
+					<td title="standard"></td>
+					<td title="alternative"></td>
+				</tr>
+				<tr>
+					<td>NVL2(x,y,z)</td>
+					<td title="MySQL">No</td>
+					<td title="Oracle 9.0.1">Yes</td>
+					<td title="Postgres">No</td>
+					<td title="SQLserver">No</td>
+					<td title="IBM DB2">No</td>
+					<td title="SQLite 3">No</td>
+					<td title="Microsoft Access, Sybase, Firebird & Interbase" class="red">Access Firebird Interbase Sybase</td>
+					<td title="Informix v11.70 & CUBRID v8.2.1" class="orange">Informix & CUBRID</td>
+					<td title="standard"></td>
+					<td title="alternative"></td>
+				</tr>
+				<tr>
+					<td>REPLACE(x,y,z)</td>
+					<td title="MySQL">Yes</td>
+					<td title="Oracle">Yes</td>
+					<td title="Postgres">Yes</td>
+					<td title="SQLserver">Yes</td>
+					<td title="IBM DB2">Yes</td>
+					<td title="SQLite 3">Yes</td>
+					<td title="Microsoft Access 2007" class="green">Microsoft Access</td>
 					<td title="others" class=""></td>
 					<td title="standard"></td>
 					<td title="alternative"></td>
@@ -207,11 +273,10 @@
 					<td title="SQLserver 2000">Yes</td>
 					<td title="IBM DB2">?</td>
 					<td title="SQLite 3">No</td>
-					<td title="Access">?</td>
 					<td title="Firebird 2.1" class="green">Firebird</td>
 					<td title="others" class=""></td>
 					<td title="standard"></td>
-					<td title="alternative">SUBSTR(x,y)</td>
+					<td title="alternative"></td>
 				</tr>
 				<tr>
 					<td>SUBSTR(x,y,z)</td>
@@ -221,7 +286,6 @@
 					<td title="SQLserver">No</td>
 					<td title="IBM DB2">Yes</td>
 					<td title="SQLite 3">Yes</td>
-					<td title="Access">?</td>
 					<td title="others" class="red">Firebird</td>
 					<td title="others" class=""></td>
 					<td title="standard"></td>
@@ -235,7 +299,6 @@
 					<td title="SQLserver" class="orange">param z required</td>
 					<td title="IBM DB2">Yes</td>
 					<td title="SQLite 3">No</td>
-					<td title="Access">?</td>
 					<td title="others" class="red">Firebird</td>
 					<td title="others" class=""></td>
 					<td title="standard"></td>
@@ -249,9 +312,21 @@
 					<td title="SQLserver">No</td>
 					<td title="IBM DB2">Yes</td>
 					<td title="SQLite 3">No</td>
-					<td title="Access">?</td>
 					<td title="Firebird v1.0" class="green">Firebird</td>
 					<td title="others" class=""></td>
+					<td title="standard">SQL-92</td>
+					<td title="alternative"></td>
+				</tr>
+				<tr>
+					<td>SUM(x)</td>
+					<td title="MySQL">Yes</td>
+					<td title="Oracle">Yes</td>
+					<td title="Postgres">Yes</td>
+					<td title="SQLserver">Yes</td>
+					<td title="IBM DB2">Yes</td>
+					<td title="SQLite 3">Yes</td>
+					<td title="Microsoft Access, Firebird & Interbase" class="green">Access Firebird Interbase</td>
+					<td title="others" class="green">Sybase Informix CUBRID</td>
 					<td title="standard">SQL-92</td>
 					<td title="alternative"></td>
 				</tr>
@@ -264,7 +339,6 @@
 					<td title="SQLserver">?</td>
 					<td title="IBM DB2">?</td>
 					<td title="SQLite 3">?</td>
-					<td title="Access">?</td>
 					<td title="others" class=""></td>
 					<td title="others" class=""></td>
 					<td title="standard"></td>

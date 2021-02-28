@@ -12,6 +12,10 @@ for (var i = 0; i < elements.length; ++i)
 			elements[i].className = "green";
 			break;
 
+		case "deprecated":
+			elements[i].className = "orange";
+			break;
+
 		case "no":
 			elements[i].className = "red";
 			break;
