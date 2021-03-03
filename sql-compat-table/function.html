@@ -15,8 +15,7 @@
 		<div>
 			inspired by <a href="https://kangax.github.io/compat-table">ES compat table</a>
 			& created by <a href="https://github.com/nils85">Vince</a>
-			<a class="button" href="https://github.com/Nils85/nils85.github.io">Fork project</a>
-			<a class="button" href="https://github.com/Nils85/nils85.github.io/issues">Report mistake</a>
+			<a class="button" href="https://github.com/Nils85/nils85.github.io">Fork</a>
 		</div>
 	</header>
 	<main>
@@ -71,32 +70,6 @@
 					<td title="alternative"></td>
 				</tr>
 				<tr>
-					<td>CHAR_LENGTH(x)</td>
-					<td title="MySQL">Yes</td>
-					<td title="Oracle">No</td>
-					<td title="Postgres">Yes</td>
-					<td title="SQLserver">No</td>
-					<td title="IBM DB2">?</td>
-					<td title="SQLite 3">No</td>
-					<td title="others" class="green">Firebird</td>
-					<td title="others" class=""></td>
-					<td title="standard">SQL-92</td>
-					<td title="alternative"></td>
-				</tr>
-				<tr>
-					<td>CHARACTER_LENGTH(x)</td>
-					<td title="MySQL">Yes</td>
-					<td title="Oracle">?</td>
-					<td title="Postgres">?</td>
-					<td title="SQLserver">No</td>
-					<td title="IBM DB2">?</td>
-					<td title="SQLite 3">No</td>
-					<td title="others" class=""></td>
-					<td title="others" class=""></td>
-					<td title="standard">SQL-92</td>
-					<td title="alternative"></td>
-				</tr>
-				<tr>
 					<td>COALESCE(x,y...)</td>
 					<td title="MySQL 3.23.3">Yes</td>
 					<td title="Oracle 9.0.1">Yes</td>
@@ -121,32 +94,6 @@
 					<td title="others" class="green">and all others...</td>
 					<td title="standard">SQL-92</td>
 					<td title="alternative"></td>
-				</tr>
-				<tr>
-					<td><s>IFNULL(x,y)</s></td>
-					<td title="MySQL 4">Yes</td>
-					<td title="Oracle">No</td>
-					<td title="Postgres" class="red">v6.5 only</td>
-					<td title="SQLserver">No</td>
-					<td title="IBM DB2">?</td>
-					<td title="SQLite 3">Yes</td>
-					<td title="CUBRID v8.3" class="green">CUBRID</td>
-					<td title="others" class="red">Microsoft Access: NZ(x,y)</td>
-					<td title="standard"></td>
-					<td title="alternative">COALESCE(x,y)</td>
-				</tr>
-				<tr>
-					<td><s>ISNULL(x)</s></td>
-					<td title="MySQL">Yes</td>
-					<td title="Oracle">No</td>
-					<td title="Postgres">No</td>
-					<td title="SQLserver" class="red">ISNULL(x,y)</td>
-					<td title="IBM DB2">?</td>
-					<td title="SQLite 3">No</td>
-					<td title="CUBRID v9" class="green">CUBRID</td>
-					<td title="others" class=""></td>
-					<td title="standard"></td>
-					<td title="alternative">... WHERE x IS NULL</td>
 				</tr>
 				<tr>
 					<td>LEFT(x,y)</td>
@@ -329,6 +276,61 @@
 					<td title="others" class="green">Sybase Informix CUBRID</td>
 					<td title="standard">SQL-92</td>
 					<td title="alternative"></td>
+				</tr>
+				<tr>
+					<td colspan="11">Functions to avoid</th>
+				</tr>
+				<tr>
+					<td>CHAR_LENGTH(x)</td>
+					<td title="MySQL">Yes</td>
+					<td title="Oracle">No</td>
+					<td title="Postgres">Yes</td>
+					<td title="SQLserver">No</td>
+					<td title="IBM DB2">?</td>
+					<td title="SQLite 3">No</td>
+					<td title="others" class="green">Firebird</td>
+					<td title="others" class=""></td>
+					<td title="standard">SQL-92</td>
+					<td title="alternative">... WHERE x LIKE '_%'</td>
+				</tr>
+				<tr>
+					<td>CHARACTER_LENGTH(x)</td>
+					<td title="MySQL">Yes</td>
+					<td title="Oracle">No</td>
+					<td title="Postgres">?</td>
+					<td title="SQLserver">No</td>
+					<td title="IBM DB2">?</td>
+					<td title="SQLite 3">No</td>
+					<td title="others" class=""></td>
+					<td title="others" class=""></td>
+					<td title="standard">SQL-92</td>
+					<td title="alternative">... WHERE x LIKE '_%'</td>
+				</tr>
+				<tr>
+					<td>IFNULL(x,y)</td>
+					<td title="MySQL 4">Yes</td>
+					<td title="Oracle">No</td>
+					<td title="Postgres" class="red">v6.5 only</td>
+					<td title="SQLserver">No</td>
+					<td title="IBM DB2">?</td>
+					<td title="SQLite 3">Yes</td>
+					<td title="CUBRID v8.3" class="green">CUBRID</td>
+					<td title="others" class="red">Microsoft Access: NZ(x,y)</td>
+					<td title="standard"></td>
+					<td title="alternative">COALESCE(x,y)</td>
+				</tr>
+				<tr>
+					<td>ISNULL(x)</td>
+					<td title="MySQL">Yes</td>
+					<td title="Oracle">No</td>
+					<td title="Postgres">No</td>
+					<td title="SQLserver" class="red">ISNULL(x,y)</td>
+					<td title="IBM DB2">?</td>
+					<td title="SQLite 3">No</td>
+					<td title="CUBRID v9" class="green">CUBRID</td>
+					<td title="others" class=""></td>
+					<td title="standard"></td>
+					<td title="alternative">... WHERE x IS NULL</td>
 				</tr>
 				<!-- Empty row:
 				<tr>
