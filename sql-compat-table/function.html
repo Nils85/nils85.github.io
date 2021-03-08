@@ -96,45 +96,6 @@
 					<td title="alternative"></td>
 				</tr>
 				<tr>
-					<td>LEFT(x,y)</td>
-					<td title="MySQL">Yes</td>
-					<td title="Oracle">No</td>
-					<td title="Postgres 9.1">Yes</td>
-					<td title="SQLserver 2000">Yes</td>
-					<td title="IBM DB2">?</td>
-					<td title="SQLite 3">No</td>
-					<td title="Firebird 2.1" class="green">Firebird</td>
-					<td title="others" class=""></td>
-					<td title="standard"></td>
-					<td title="alternative"></td>
-				</tr>
-				<tr>
-					<td>LEN(x)</td>
-					<td title="MySQL">No</td>
-					<td title="Oracle">No</td>
-					<td title="Postgres">No</td>
-					<td title="SQLserver">Yes</td>
-					<td title="IBM DB2">?</td>
-					<td title="SQLite 3">No</td>
-					<td title="others" class="green">Microsoft Access</td>
-					<td title="others" class=""></td>
-					<td title="standard"></td>
-					<td title="alternative">... WHERE x LIKE '_%'</td>
-				</tr>
-				<tr>
-					<td>LENGTH(x)</td>
-					<td title="MySQL">Yes</td>
-					<td title="Oracle 9.0.1">Yes</td>
-					<td title="Postgres 7.2">Yes</td>
-					<td title="SQLserver">No</td>
-					<td title="IBM DB2 v8.2">Yes</td>
-					<td title="SQLite 3">Yes</td>
-					<td title="others" class="red">Firebird</td>
-					<td title="others" class="red">Microsoft Access</td>
-					<td title="standard"></td>
-					<td title="alternative">... WHERE x LIKE '_%'</td>
-				</tr>
-				<tr>
 					<td>MAX(x)</td>
 					<td title="MySQL">Yes</td>
 					<td title="Oracle">Yes</td>
@@ -174,6 +135,126 @@
 					<td title="alternative"></td>
 				</tr>
 				<tr>
+					<td>REPLACE(x,y,z)</td>
+					<td title="MySQL">Yes</td>
+					<td title="Oracle">Yes</td>
+					<td title="Postgres">Yes</td>
+					<td title="SQLserver">Yes</td>
+					<td title="IBM DB2">Yes</td>
+					<td title="SQLite 3">Yes</td>
+					<td title="Microsoft Access 2007" class="green">Microsoft Access</td>
+					<td title="others" class=""></td>
+					<td title="standard"></td>
+					<td title="alternative"></td>
+				</tr>
+				<tr>
+					<td>SUM(x)</td>
+					<td title="MySQL">Yes</td>
+					<td title="Oracle">Yes</td>
+					<td title="Postgres">Yes</td>
+					<td title="SQLserver">Yes</td>
+					<td title="IBM DB2">Yes</td>
+					<td title="SQLite 3">Yes</td>
+					<td title="Microsoft Access, Firebird & Interbase" class="green">Access Firebird Interbase</td>
+					<td title="others" class="green">Sybase Informix CUBRID</td>
+					<td title="standard">SQL-92</td>
+					<td title="alternative"></td>
+				</tr>
+				<tr>
+					<td colspan="11">Other functions</th>
+				</tr>
+				<tr>
+					<td>CHAR_LENGTH(x)</td>
+					<td title="MySQL">Yes</td>
+					<td title="Oracle">No</td>
+					<td title="Postgres">Yes</td>
+					<td title="SQLserver">No</td>
+					<td title="IBM DB2">?</td>
+					<td title="SQLite 3">No</td>
+					<td title="others" class="green">Firebird</td>
+					<td title="others" class=""></td>
+					<td title="standard">SQL-92</td>
+					<td title="alternative">... WHERE x LIKE '_%'</td>
+				</tr>
+				<tr>
+					<td>CHARACTER_LENGTH(x)</td>
+					<td title="MySQL">Yes</td>
+					<td title="Oracle">No</td>
+					<td title="Postgres">?</td>
+					<td title="SQLserver">No</td>
+					<td title="IBM DB2">?</td>
+					<td title="SQLite 3">No</td>
+					<td title="others" class=""></td>
+					<td title="others" class=""></td>
+					<td title="standard">SQL-92</td>
+					<td title="alternative">... WHERE x LIKE '_%'</td>
+				</tr>
+				<tr>
+					<td>IFNULL(x,y)</td>
+					<td title="MySQL 4">Yes</td>
+					<td title="Oracle">No</td>
+					<td title="Postgres" class="red">v6.5 only</td>
+					<td title="SQLserver">No</td>
+					<td title="IBM DB2">?</td>
+					<td title="SQLite 3">Yes</td>
+					<td title="CUBRID v8.3" class="green">CUBRID</td>
+					<td title="others" class="red">Microsoft Access: NZ(x,y)</td>
+					<td title="standard"></td>
+					<td title="alternative">COALESCE(x,y)</td>
+				</tr>
+				<tr>
+					<td>ISNULL(x)</td>
+					<td title="MySQL">Yes</td>
+					<td title="Oracle">No</td>
+					<td title="Postgres">No</td>
+					<td title="SQLserver" class="red">ISNULL(x,y)</td>
+					<td title="IBM DB2">?</td>
+					<td title="SQLite 3">No</td>
+					<td title="CUBRID v9" class="green">CUBRID</td>
+					<td title="others" class=""></td>
+					<td title="standard"></td>
+					<td title="alternative">... WHERE x IS NULL</td>
+				</tr>
+				<tr>
+					<td>LEFT(x,y)</td>
+					<td title="MySQL">Yes</td>
+					<td title="Oracle">No</td>
+					<td title="Postgres 9.1">Yes</td>
+					<td title="SQLserver 2000">Yes</td>
+					<td title="IBM DB2">?</td>
+					<td title="SQLite 3">No</td>
+					<td title="Firebird 2.1" class="green">Firebird</td>
+					<td title="others" class=""></td>
+					<td title="standard"></td>
+					<td title="alternative"></td>
+				</tr>
+				<tr>
+					<td>LEN(x)</td>
+					<td title="MySQL">No</td>
+					<td title="Oracle">No</td>
+					<td title="Postgres">No</td>
+					<td title="SQLserver">Yes</td>
+					<td title="IBM DB2">?</td>
+					<td title="SQLite 3">No</td>
+					<td title="others" class="green">Microsoft Access</td>
+					<td title="others" class=""></td>
+					<td title="standard"></td>
+					<td title="alternative">... WHERE x LIKE '_%'</td>
+				</tr>
+				<tr>
+					<td>LENGTH(x)</td>
+					<td title="MySQL">Yes</td>
+					<td title="Oracle 9.0.1">Yes</td>
+					<td title="Postgres 7.2">Yes</td>
+					<td title="SQLserver">No</td>
+					<td title="IBM DB2 v8.2">Yes</td>
+					<td title="SQLite 3">Yes</td>
+					<td title="others" class="red">Firebird</td>
+					<td title="others" class="red">Microsoft Access</td>
+					<td title="standard"></td>
+					<td title="alternative">... WHERE x LIKE '_%'</td>
+				</tr>
+				<tr>
 					<td>NVL(x,y)</td>
 					<td title="MySQL">No</td>
 					<td title="Oracle">Yes</td>
@@ -196,19 +277,6 @@
 					<td title="SQLite 3">No</td>
 					<td title="Microsoft Access, Sybase, Firebird & Interbase" class="red">Access Firebird Interbase Sybase</td>
 					<td title="Informix v11.70 & CUBRID v8.2.1" class="orange">Informix & CUBRID</td>
-					<td title="standard"></td>
-					<td title="alternative"></td>
-				</tr>
-				<tr>
-					<td>REPLACE(x,y,z)</td>
-					<td title="MySQL">Yes</td>
-					<td title="Oracle">Yes</td>
-					<td title="Postgres">Yes</td>
-					<td title="SQLserver">Yes</td>
-					<td title="IBM DB2">Yes</td>
-					<td title="SQLite 3">Yes</td>
-					<td title="Microsoft Access 2007" class="green">Microsoft Access</td>
-					<td title="others" class=""></td>
 					<td title="standard"></td>
 					<td title="alternative"></td>
 				</tr>
@@ -264,74 +332,6 @@
 					<td title="standard">SQL-92</td>
 					<td title="alternative"></td>
 				</tr>
-				<tr>
-					<td>SUM(x)</td>
-					<td title="MySQL">Yes</td>
-					<td title="Oracle">Yes</td>
-					<td title="Postgres">Yes</td>
-					<td title="SQLserver">Yes</td>
-					<td title="IBM DB2">Yes</td>
-					<td title="SQLite 3">Yes</td>
-					<td title="Microsoft Access, Firebird & Interbase" class="green">Access Firebird Interbase</td>
-					<td title="others" class="green">Sybase Informix CUBRID</td>
-					<td title="standard">SQL-92</td>
-					<td title="alternative"></td>
-				</tr>
-				<tr>
-					<td colspan="11">Functions to avoid</th>
-				</tr>
-				<tr>
-					<td>CHAR_LENGTH(x)</td>
-					<td title="MySQL">Yes</td>
-					<td title="Oracle">No</td>
-					<td title="Postgres">Yes</td>
-					<td title="SQLserver">No</td>
-					<td title="IBM DB2">?</td>
-					<td title="SQLite 3">No</td>
-					<td title="others" class="green">Firebird</td>
-					<td title="others" class=""></td>
-					<td title="standard">SQL-92</td>
-					<td title="alternative">... WHERE x LIKE '_%'</td>
-				</tr>
-				<tr>
-					<td>CHARACTER_LENGTH(x)</td>
-					<td title="MySQL">Yes</td>
-					<td title="Oracle">No</td>
-					<td title="Postgres">?</td>
-					<td title="SQLserver">No</td>
-					<td title="IBM DB2">?</td>
-					<td title="SQLite 3">No</td>
-					<td title="others" class=""></td>
-					<td title="others" class=""></td>
-					<td title="standard">SQL-92</td>
-					<td title="alternative">... WHERE x LIKE '_%'</td>
-				</tr>
-				<tr>
-					<td>IFNULL(x,y)</td>
-					<td title="MySQL 4">Yes</td>
-					<td title="Oracle">No</td>
-					<td title="Postgres" class="red">v6.5 only</td>
-					<td title="SQLserver">No</td>
-					<td title="IBM DB2">?</td>
-					<td title="SQLite 3">Yes</td>
-					<td title="CUBRID v8.3" class="green">CUBRID</td>
-					<td title="others" class="red">Microsoft Access: NZ(x,y)</td>
-					<td title="standard"></td>
-					<td title="alternative">COALESCE(x,y)</td>
-				</tr>
-				<tr>
-					<td>ISNULL(x)</td>
-					<td title="MySQL">Yes</td>
-					<td title="Oracle">No</td>
-					<td title="Postgres">No</td>
-					<td title="SQLserver" class="red">ISNULL(x,y)</td>
-					<td title="IBM DB2">?</td>
-					<td title="SQLite 3">No</td>
-					<td title="CUBRID v9" class="green">CUBRID</td>
-					<td title="others" class=""></td>
-					<td title="standard"></td>
-					<td title="alternative">... WHERE x IS NULL</td>
-				</tr>
 				<!-- Empty row:
 				<tr>
 					<td>NEW FUNCTION(x,y,z)</td>
@@ -350,6 +350,13 @@
 			</tbody>
 		</table>
 		<div>
+			Notes
+			<ul>
+				<li>It is possible to create stored procedures for unavailable functions in your database system (except with SQLite)</li>
+				<li>It is also possible to replace a function by a more compatible SQL keyword</li>
+				<li>...WHERE SUBSTR(col,0,3) = 'abc' <b>can be replaced by</b> ...WHERE col LIKE 'abc%'</li>
+				<li>...WHERE LENGTH(col) = 3 <b>can be replaced by</b> ...WHERE col LIKE '___'</li>
+			</ul>
 			Reference manuals
 			<ul>
 				<li>
@@ -389,6 +396,10 @@
 					<a href="https://www.ibm.com/support/knowledgecenter/en/SSEPGG_9.7.0/com.ibm.db2.luw.sql.ref.doc/doc/c0006211.html">v9.7</a>
 				</li>
 				<li>
+					<a href="http://www.ibm.com/support/knowledgecenter/SSGU8G/welcomeIfxServers">IBM Informix</a>:
+					<a href="http://publib.boulder.ibm.com/infocenter/idshelp/v10/index.jsp">v10</a>
+				</li>
+				<li>
 					<a href="http://www.firebirdsql.org/en/documentation">Firebird RDBMS</a>:
 					<a href="http://firebirdsql.org/file/documentation/html/en/refdocs/fblangref30/firebird-30-language-reference.html#fblangref30-functions">v3.0</a>
 					<a href="http://firebirdsql.org/file/documentation/html/en/refdocs/fblangref25/firebird-25-language-reference.html#fblangref25-functions">v2.5</a>
@@ -396,10 +407,6 @@
 				</li>
 				<li>
 					<a href="http://infocenter.sybase.com/help/index.jsp">SAP Sybase SQL Anywhere</a>
-				</li>
-				<li>
-					<a href="http://www.ibm.com/support/knowledgecenter/SSGU8G/welcomeIfxServers">IBM Informix</a>:
-					<a href="http://publib.boulder.ibm.com/infocenter/idshelp/v10/index.jsp">v10</a>
 				</li>
 				<li>
 					<a href="http://www.cubrid.org/manuals">CUBRID</a>

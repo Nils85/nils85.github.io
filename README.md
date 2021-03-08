@@ -6,7 +6,7 @@ Is it possible to directly write SQL queries that work on all major databases wi
 Like one "universal" SQL language understood by everybody.
 
 The answer is yes... if you restrict yourself to the common keywords compatible across database systems.  
-Actually the SQL language is standardized but unfortunately these standards are not really respected by database vendors.
+Actually the SQL language is standardized but unfortunately these standards are not always respected by database vendors.
 
 The goal of this project is to have enough information with these compatibility tables to write a universal SQL reference manual for all developers who want to write agnostic SQL query.
 

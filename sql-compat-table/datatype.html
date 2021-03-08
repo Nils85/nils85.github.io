@@ -57,6 +57,45 @@
 				</tr>
 				-->
 				<tr>
+					<td>DOUBLE PRECISION</td>
+					<td title="MySQL">Yes</td>
+					<td title="Oracle">Yes</td>
+					<td title="Postgres">Yes</td>
+					<td title="SQLserver" class="green">float(53)</td>
+					<td title="IBM DB2">Yes</td>
+					<td title="SQLite 3">Yes</td>
+					<td title="others" class="red">Microsoft Access</td>
+					<td title="Informix v10" class="green">Informix</td>
+					<td title="standard">SQL-92</td>
+					<td title="alternative"></td>
+				</tr>
+				<tr>
+					<td>FLOAT(24)</td>
+					<td title="MySQL" class="green">max 53</td>
+					<td title="Oracle" class="green">max 126</td>
+					<td title="Postgres" class="green">max 53</td>
+					<td title="SQLserver" class="green">max 53</td>
+					<td title="IBM DB2">Yes</td>
+					<td title="SQLite 3">Yes</td>
+					<td title="others" class=""></td>
+					<td title="others" class=""></td>
+					<td title="standard">SQL-92</td>
+					<td title="alternative"></td>
+				</tr>
+				<tr>
+					<td>REAL</td>
+					<td title="MySQL">Yes</td>
+					<td title="Oracle">Yes</td>
+					<td title="Postgres">Yes</td>
+					<td title="SQLserver">Yes</td>
+					<td title="IBM DB2">Yes</td>
+					<td title="SQLite 3">Yes</td>
+					<td title="others" class="green">Microsoft Access</td>
+					<td title="Informix v10" class="green">Informix</td>
+					<td title="standard">SQL-92</td>
+					<td title="alternative">FLOAT(24)</td>
+				</tr>
+				<tr>
 					<td>DECIMAL(9,2)</td>
 					<td title="MySQL">Yes</td>
 					<td title="Oracle">Yes</td>
@@ -67,7 +106,20 @@
 					<td title="Informix v10" class="green">Informix</td>
 					<td title="others" class="green">Microsoft Access</td>
 					<td title="standard">SQL-92</td>
-					<td title="alternative"></td>
+					<td title="alternative">NUMERIC(9,2)</td>
+				</tr>
+				<tr>
+					<td>NUMERIC(9,2)</td>
+					<td title="MySQL">Yes</td>
+					<td title="Oracle">Yes</td>
+					<td title="Postgres">Yes</td>
+					<td title="SQLserver">Yes</td>
+					<td title="IBM DB2">Yes</td>
+					<td title="SQLite 3">Yes</td>
+					<td title="others" class="green">Microsoft Access</td>
+					<td title="others" class=""></td>
+					<td title="standard">SQL-92</td>
+					<td title="alternative">DECIMAL(9,2)</td>
 				</tr>
 				<tr>
 					<td>INT</td>
@@ -118,6 +170,19 @@
 					<td title="SQLite 3">Yes</td>
 					<td title="Informix v10" class="orange">Informix: max 255</td>
 					<td title="others" class="green">Microsoft Access</td>
+					<td title="standard">SQL-92</td>
+					<td title="alternative"></td>
+				</tr>
+				<tr>
+					<td>DATE</td>
+					<td title="MySQL">Yes</td>
+					<td title="Oracle">Yes</td>
+					<td title="Postgres">Yes</td>
+					<td title="SQLserver">Yes</td>
+					<td title="IBM DB2 v8.2">Yes</td>
+					<td title="SQLite 3">Yes</td>
+					<td title="others" class=""></td>
+					<td title="others" class=""></td>
 					<td title="standard">SQL-92</td>
 					<td title="alternative"></td>
 				</tr>
@@ -177,7 +242,7 @@
 					<td title="alternative">VARCHAR(4000)<br>insert Base64(val); select ToString(col)</td>
 				</tr>
 				<tr>
-					<td colspan="11">Column property</th>
+					<td colspan="11">Column properties</th>
 				</tr>
 				<tr>
 					<td>NOT NULL</td>
@@ -204,6 +269,87 @@
 					<td title="others" class=""></td>
 					<td title="standard"></td>
 					<td title="alternative"></td>
+				</tr>
+				<tr>
+					<td>DEFAULT value</td>
+					<td title="MySQL">Yes</td>
+					<td title="Oracle">Yes</td>
+					<td title="Postgres">Yes</td>
+					<td title="SQLserver">Yes</td>
+					<td title="IBM DB2">?</td>
+					<td title="SQLite 3">Yes</td>
+					<td title="others" class=""></td>
+					<td title="others" class=""></td>
+					<td title="standard">SQL-92</td>
+					<td title="alternative"></td>
+				</tr>
+				<tr>
+					<td>UNIQUE</td>
+					<td title="MySQL">Yes</td>
+					<td title="Oracle">?</td>
+					<td title="Postgres">Yes</td>
+					<td title="SQLserver">?</td>
+					<td title="IBM DB2 v8.2">Yes</td>
+					<td title="SQLite 3">Yes</td>
+					<td title="others" class=""></td>
+					<td title="others" class=""></td>
+					<td title="standard"></td>
+					<td title="alternative"></td>
+				</tr>
+				<tr>
+					<td colspan="11">Other column properties</th>
+				</tr>
+				<tr>
+					<td>AUTO_INCREMENT</td>
+					<td title="MySQL">Yes</td>
+					<td title="Oracle">No</td>
+					<td title="Postgres">?</td>
+					<td title="SQLserver">No</td>
+					<td title="IBM DB2">?</td>
+					<td title="SQLite 3">?</td>
+					<td title="others" class="red">Sybase</td>
+					<td title="others" class=""></td>
+					<td title="standard"></td>
+					<td title="alternative">INSERT ... SELECT COALESCE(MAX(id)+1,1)...</td>
+				</tr>
+				<tr>
+					<td>IDENTITY(1,1)</td>
+					<td title="MySQL">No</td>
+					<td title="Oracle">No</td>
+					<td title="Postgres">?</td>
+					<td title="SQLserver">Yes</td>
+					<td title="IBM DB2">?</td>
+					<td title="SQLite 3">Yes</td>
+					<td title="others" class="red">Sybase</td>
+					<td title="others" class=""></td>
+					<td title="standard"></td>
+					<td title="alternative">INSERT ... SELECT COALESCE(MAX(id)+1,1)...</td>
+				</tr>
+				<tr>
+					<td>GENERATED BY DEFAULT AS IDENTITY</td>
+					<td title="MySQL">?</td>
+					<td title="Oracle v12.1" class="orange">since 12c</td>
+					<td title="Postgres">?</td>
+					<td title="SQLserver">?</td>
+					<td title="IBM DB2 v8.2">Yes</td>
+					<td title="SQLite 3">?</td>
+					<td title="others" class=""></td>
+					<td title="others" class=""></td>
+					<td title="standard"></td>
+					<td title="alternative">INSERT ... SELECT COALESCE(MAX(id)+1,1)...</td>
+				</tr>
+				<tr>
+					<td>UNSIGNED</td>
+					<td title="MySQL" class="green">integer</td>
+					<td title="Oracle">No</td>
+					<td title="Postgres">No</td>
+					<td title="SQLserver">No</td>
+					<td title="IBM DB2">No</td>
+					<td title="SQLite 3">Yes</td>
+					<td title="Microsoft Access, Firebird & CUBRID" class="red">Access Firebird CUBRID</td>
+					<td title="others" class="green">Sybase</td>
+					<td title="standard"></td>
+					<td title="alternative">INSERT INTO tab (col) VALUES (int - 2147483647)<br>SELECT col + 2147483647 FROM tab</td>
 				</tr>
 				<tr>
 					<td colspan="11">Other binary data</th>
@@ -233,6 +379,103 @@
 					<td title="others" class=""></td>
 					<td title="standard"></td>
 					<td title="alternative">VARCHAR(4000)<br>insert Base64(val); select ToString(col)</td>
+				</tr>
+				<tr>
+					<td colspan="11">Other boolean types</th>
+				</tr>
+				<tr>
+					<td>BOOLEAN</td>
+					<td title="MySQL">Yes</td>
+					<td title="Oracle">No</td>
+					<td title="Postgres">Yes</td>
+					<td title="SQLserver" class="red">BIT</td>
+					<td title="IBM DB2 v9.7">Yes</td>
+					<td title="SQLite 3">Yes</td>
+					<td title="others" class=""></td>
+					<td title="others" class=""></td>
+					<td title="standard">SQL:1999</td>
+					<td title="alternative">CHAR(1)</td>
+				</tr>
+				<tr>
+					<td>BIT(8)</td>
+					<td title="MySQL" class="green">max 64</td>
+					<td title="Oracle">?</td>
+					<td title="Postgres">Yes</td>
+					<td title="SQLserver" class="red">boolean value</td>
+					<td title="IBM DB2">?</td>
+					<td title="SQLite 3">Yes</td>
+					<td title="others" class="green">CUBRID</td>
+					<td title="others" class=""></td>
+					<td title="standard"><s>SQL:1999</s></td>
+					<td title="alternative">CHAR(8)</td>
+				</tr>
+				<tr>
+					<td>BIT VARYING(8)</td>
+					<td title="MySQL">No</td>
+					<td title="Oracle">?</td>
+					<td title="Postgres">Yes</td>
+					<td title="SQLserver">No</td>
+					<td title="IBM DB2">?</td>
+					<td title="SQLite 3">Yes</td>
+					<td title="others" class=""></td>
+					<td title="others" class=""></td>
+					<td title="standard"><s>SQL:1999</s></td>
+					<td title="alternative">VARCHAR(8)</td>
+				</tr>
+				<tr>
+					<td colspan="11">Other date/time types</th>
+				</tr>
+				<tr>
+					<td>DATETIME</td>
+					<td title="MySQL">Yes</td>
+					<td title="Oracle">No</td>
+					<td title="Postgres">No</td>
+					<td title="SQLserver">Yes</td>
+					<td title="IBM DB2 v9.7">No</td>
+					<td title="SQLite 3">Yes</td>
+					<td title="others" class=""></td>
+					<td title="others" class=""></td>
+					<td title="standard"></td>
+					<td title="alternative"></td>
+				</tr>
+				<tr>
+					<td>TIME</td>
+					<td title="MySQL">Yes</td>
+					<td title="Oracle">No</td>
+					<td title="Postgres">Yes</td>
+					<td title="SQLserver">Yes</td>
+					<td title="IBM DB2 v9.7">Yes</td>
+					<td title="SQLite 3">Yes</td>
+					<td title="others" class=""></td>
+					<td title="others" class=""></td>
+					<td title="standard"></td>
+					<td title="alternative"></td>
+				</tr>
+				<tr>
+					<td>TIMESTAMP</td>
+					<td title="MySQL">Yes</td>
+					<td title="Oracle">Yes</td>
+					<td title="Postgres">Yes</td>
+					<td title="SQLserver">No</td>
+					<td title="IBM DB2 v9.7">Yes</td>
+					<td title="SQLite 3">Yes</td>
+					<td title="others" class=""></td>
+					<td title="others" class=""></td>
+					<td title="standard"></td>
+					<td title="alternative"></td>
+				</tr>
+				<tr>
+					<td>INTERVAL</td>
+					<td title="MySQL">?</td>
+					<td title="Oracle">?</td>
+					<td title="Postgres">?</td>
+					<td title="SQLserver">?</td>
+					<td title="IBM DB2">?</td>
+					<td title="SQLite 3">Yes</td>
+					<td title="others" class=""></td>
+					<td title="others" class=""></td>
+					<td title="standard">SQL-92</td>
+					<td title="alternative"></td>
 				</tr>
 				<tr>
 					<td colspan="11">Other character types</th>
@@ -277,6 +520,19 @@
 					<td title="alternative">VARCHAR(126)</td>
 				</tr>
 				<tr>
+					<td>LVARCHAR(126)</td>
+					<td title="MySQL">?</td>
+					<td title="Oracle">?</td>
+					<td title="Postgres">?</td>
+					<td title="SQLserver">?</td>
+					<td title="IBM DB2">?</td>
+					<td title="SQLite 3">Yes</td>
+					<td title="Informix v10" class="green">Informix: max 32739</td>
+					<td title="others" class=""></td>
+					<td title="standard"></td>
+					<td title="alternative">VARCHAR(126)</td>
+				</tr>
+				<tr>
 					<td>TEXT</td>
 					<td title="MySQL">Yes</td>
 					<td title="Oracle">No</td>
@@ -288,6 +544,32 @@
 					<td title="others" class=""></td>
 					<td title="standard"></td>
 					<td title="alternative">VARCHAR(4000)</td>
+				</tr>
+				<tr>
+					<td>NATIONAL CHARACTER(255)</td>
+					<td title="MySQL">No</td>
+					<td title="Oracle">?</td>
+					<td title="Postgres">?</td>
+					<td title="SQLserver">Yes</td>
+					<td title="IBM DB2">?</td>
+					<td title="SQLite 3">Yes</td>
+					<td title="others" class=""></td>
+					<td title="others" class=""></td>
+					<td title="standard">SQL-92</td>
+					<td title="alternative">CHAR(255)</td>
+				</tr>
+				<tr>
+					<td>NATIONAL CHARACTER VARYING(126)</td>
+					<td title="MySQL">No</td>
+					<td title="Oracle">?</td>
+					<td title="Postgres">?</td>
+					<td title="SQLserver">Yes</td>
+					<td title="IBM DB2">?</td>
+					<td title="SQLite 3">Yes</td>
+					<td title="others" class=""></td>
+					<td title="others" class=""></td>
+					<td title="standard">SQL-92</td>
+					<td title="alternative">VARCHAR(126)</td>
 				</tr>
 				<tr>
 					<td colspan="11">Other number types</th>
@@ -345,59 +627,30 @@
 					<td title="alternative">SMALLINT</td>
 				</tr>
 				<tr>
-					<td colspan="11">Other column property</th>
-				</tr>
-				<tr>
-					<td>AUTO_INCREMENT</td>
+					<td>DOUBLE</td>
 					<td title="MySQL">Yes</td>
-					<td title="Oracle">No</td>
-					<td title="Postgres">?</td>
-					<td title="SQLserver">No</td>
-					<td title="IBM DB2">?</td>
-					<td title="SQLite 3">?</td>
-					<td title="others" class="red">Sybase</td>
-					<td title="others" class=""></td>
-					<td title="standard"></td>
-					<td title="alternative">INSERT ... SELECT COALESCE(MAX(id)+1,1)...</td>
-				</tr>
-				<tr>
-					<td>IDENTITY(1,1)</td>
-					<td title="MySQL">No</td>
-					<td title="Oracle">No</td>
-					<td title="Postgres">?</td>
-					<td title="SQLserver">Yes</td>
-					<td title="IBM DB2">?</td>
-					<td title="SQLite 3">Yes</td>
-					<td title="others" class="red">Sybase</td>
-					<td title="others" class=""></td>
-					<td title="standard"></td>
-					<td title="alternative">INSERT ... SELECT COALESCE(MAX(id)+1,1)...</td>
-				</tr>
-				<tr>
-					<td>GENERATED BY DEFAULT AS IDENTITY</td>
-					<td title="MySQL">?</td>
-					<td title="Oracle v12.1" class="orange">since 12c</td>
-					<td title="Postgres">?</td>
-					<td title="SQLserver">?</td>
-					<td title="IBM DB2 v8.2">Yes</td>
-					<td title="SQLite 3">?</td>
-					<td title="others" class=""></td>
-					<td title="others" class=""></td>
-					<td title="standard"></td>
-					<td title="alternative">INSERT ... SELECT COALESCE(MAX(id)+1,1)...</td>
-				</tr>
-				<tr>
-					<td>UNSIGNED</td>
-					<td title="MySQL" class="green">integer</td>
 					<td title="Oracle">No</td>
 					<td title="Postgres">No</td>
 					<td title="SQLserver">No</td>
-					<td title="IBM DB2">No</td>
+					<td title="IBM DB2">Yes</td>
 					<td title="SQLite 3">Yes</td>
-					<td title="Microsoft Access, Firebird & CUBRID" class="red">Access Firebird CUBRID</td>
-					<td title="others" class="green">Sybase</td>
+					<td title="Informix v10" class="red">Informix</td>
+					<td title="others" class="green">Microsoft Access</td>
 					<td title="standard"></td>
-					<td title="alternative">INSERT INTO tab (col) VALUES (int - 2147483647)<br>SELECT col + 2147483647 FROM tab</td>
+					<td title="alternative">DOUBLE PRECISION</td>
+				</tr>
+				<tr>
+					<td>SERIAL</td>
+					<td title="MySQL">?</td>
+					<td title="Oracle">No</td>
+					<td title="Postgres">Yes</td>
+					<td title="SQLserver">?</td>
+					<td title="IBM DB2">?</td>
+					<td title="SQLite 3">Yes</td>
+					<td title="Informix v10" class="green">Informix</td>
+					<td title="others" class=""></td>
+					<td title="standard"></td>
+					<td title="alternative"></td>
 				</tr>
 				<!-- Empty row:
 				<tr>
@@ -419,7 +672,7 @@
 		<div>
 			Notes
 			<ul>
-				<li>SQLite accept anything because each value are dynamically typed</li>
+				<li>SQLite accepts anything as column type because each value are dynamically typed</li>
 			</ul>
 			Reference manuals
 			<ul>
@@ -450,6 +703,10 @@
 					<a href="https://docs.microsoft.com/en-us/previous-versions/sql/sql-server-2008-r2/ms187752(v=sql.105)">2008 R2</a>
 				</li>
 				<li>
+					<a href="https://support.microsoft.com/en-us/office/equivalent-ansi-sql-data-types-7a0a6bef-ef25-45f9-8a9a-3c5f21b5c65d">Microsoft Access</a>
+				</li>
+				
+				<li>
 					<a href="https://www.sqlite.org/docs.html">SQLite</a>:
 					<a href="https://www.sqlite.org/datatype3.html">v3</a>
 					<a href="https://www.sqlite.org/datatypes.html">v2</a>
@@ -461,6 +718,10 @@
 					<a href="https://www.ibm.com/support/knowledgecenter/en/SSEPGG_9.7.0/com.ibm.db2.luw.sql.ref.doc/doc/r0008483.html">v9.7</a>
 				</li>
 				<li>
+					<a href="http://www.ibm.com/support/knowledgecenter/SSGU8G/welcomeIfxServers">IBM Informix</a>:
+					<a href="http://publib.boulder.ibm.com/infocenter/idshelp/v10/index.jsp">v10</a>
+				</li>
+				<li>
 					<a href="http://www.firebirdsql.org/en/documentation">Firebird RDBMS</a>:
 					<a href="http://firebirdsql.org/file/documentation/html/en/refdocs/fblangref30/firebird-30-language-reference.html#fblangref30-datatypes">v3.0</a>
 					<a href="http://firebirdsql.org/file/documentation/html/en/refdocs/fblangref25/firebird-25-language-reference.html#fblangref25-datatypes">v2.5</a>
@@ -468,10 +729,6 @@
 				</li>
 				<li>
 					<a href="http://infocenter.sybase.com/help/index.jsp">SAP Sybase SQL Anywhere</a>
-				</li>
-				<li>
-					<a href="http://www.ibm.com/support/knowledgecenter/SSGU8G/welcomeIfxServers">IBM Informix</a>:
-					<a href="http://publib.boulder.ibm.com/infocenter/idshelp/v10/index.jsp">v10</a>
 				</li>
 				<li>
 					<a href="http://www.cubrid.org/manuals">CUBRID</a>
