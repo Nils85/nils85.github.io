@@ -29,12 +29,12 @@
 			<thead>
 				<tr>
 					<th>Example of data type</th>
-					<th><b>SQL/PSM</b><br>MySQL<br>MariaDB</th>
-					<th><b>PL/SQL</b><br>Oracle<br>Database</th>
-					<th><b>PL/pgSQL</b><br>PostgreSQL</th>
-					<th><b>T-SQL</b><br>Microsoft<br>SQL Server</th>
-					<th><b>SQL PL</b><br>IBM DB2</th>
-					<th><b>SQLite</b><br>(embedded)</th>
+					<th><b>MySQL</b><br>MariaDB</th>
+					<th><b>Oracle<br>Database</b></th>
+					<th><b>PostgreSQL</b></th>
+					<th><b>Microsoft<br>SQL Server</b></th>
+					<th><b>IBM DB2</b></th>
+					<th><b>SQLite</b></th>
 					<th colspan="2"><b>Other</b><br>database systems</th>
 					<th>ANSI/ISO<br>standard</th>
 					<th>Universal alternative</th>
@@ -174,16 +174,58 @@
 					<td title="alternative"></td>
 				</tr>
 				<tr>
-					<td>DATE</td>
+					<td colspan="11">Column properties</th>
+				</tr>
+				<tr>
+					<td>NOT NULL</td>
 					<td title="MySQL">Yes</td>
 					<td title="Oracle">Yes</td>
-					<td title="Postgres">Yes</td>
+					<td title="Postgres">?</td>
 					<td title="SQLserver">Yes</td>
+					<td title="IBM DB2">?</td>
+					<td title="SQLite 3">Yes</td>
+					<td title="others" class=""></td>
+					<td title="others" class=""></td>
+					<td title="standard"></td>
+					<td title="alternative"></td>
+				</tr>
+				<tr>
+					<td>PRIMARY KEY</td>
+					<td title="MySQL">Yes</td>
+					<td title="Oracle">?</td>
+					<td title="Postgres">?</td>
+					<td title="SQLserver">?</td>
 					<td title="IBM DB2 v8.2">Yes</td>
 					<td title="SQLite 3">Yes</td>
 					<td title="others" class=""></td>
 					<td title="others" class=""></td>
+					<td title="standard"></td>
+					<td title="alternative"></td>
+				</tr>
+				<tr>
+					<td>DEFAULT value</td>
+					<td title="MySQL">Yes</td>
+					<td title="Oracle">Yes</td>
+					<td title="Postgres">Yes</td>
+					<td title="SQLserver">Yes</td>
+					<td title="IBM DB2">?</td>
+					<td title="SQLite 3">Yes</td>
+					<td title="others" class=""></td>
+					<td title="others" class=""></td>
 					<td title="standard">SQL-92</td>
+					<td title="alternative"></td>
+				</tr>
+				<tr>
+					<td>UNIQUE</td>
+					<td title="MySQL">Yes</td>
+					<td title="Oracle">?</td>
+					<td title="Postgres">Yes</td>
+					<td title="SQLserver">?</td>
+					<td title="IBM DB2 v8.2">Yes</td>
+					<td title="SQLite 3">Yes</td>
+					<td title="others" class=""></td>
+					<td title="others" class=""></td>
+					<td title="standard"></td>
 					<td title="alternative"></td>
 				</tr>
 				<tr>
@@ -242,58 +284,71 @@
 					<td title="alternative">VARCHAR(4000)<br>insert Base64(val); select ToString(col)</td>
 				</tr>
 				<tr>
-					<td colspan="11">Column properties</th>
+					<td colspan="11">Date/time types</th>
 				</tr>
 				<tr>
-					<td>NOT NULL</td>
+					<td>DATE</td>
 					<td title="MySQL">Yes</td>
-					<td title="Oracle">Yes</td>
-					<td title="Postgres">?</td>
-					<td title="SQLserver">Yes</td>
-					<td title="IBM DB2">?</td>
-					<td title="SQLite 3">Yes</td>
-					<td title="others" class=""></td>
-					<td title="others" class=""></td>
-					<td title="standard"></td>
-					<td title="alternative"></td>
-				</tr>
-				<tr>
-					<td>PRIMARY KEY</td>
-					<td title="MySQL">Yes</td>
-					<td title="Oracle">?</td>
-					<td title="Postgres">?</td>
-					<td title="SQLserver">?</td>
-					<td title="IBM DB2 v8.2">Yes</td>
-					<td title="SQLite 3">Yes</td>
-					<td title="others" class=""></td>
-					<td title="others" class=""></td>
-					<td title="standard"></td>
-					<td title="alternative"></td>
-				</tr>
-				<tr>
-					<td>DEFAULT value</td>
-					<td title="MySQL">Yes</td>
-					<td title="Oracle">Yes</td>
+					<td title="Oracle" class="orange">DATETIME</td>
 					<td title="Postgres">Yes</td>
 					<td title="SQLserver">Yes</td>
-					<td title="IBM DB2">?</td>
-					<td title="SQLite 3">Yes</td>
+					<td title="IBM DB2 v8.2">Yes</td>
+					<td title="SQLite 3" class="orange">TEXT or INT</td>
 					<td title="others" class=""></td>
 					<td title="others" class=""></td>
 					<td title="standard">SQL-92</td>
 					<td title="alternative"></td>
 				</tr>
 				<tr>
-					<td>UNIQUE</td>
+					<td>DATETIME</td>
 					<td title="MySQL">Yes</td>
-					<td title="Oracle">?</td>
-					<td title="Postgres">Yes</td>
-					<td title="SQLserver">?</td>
-					<td title="IBM DB2 v8.2">Yes</td>
+					<td title="Oracle">No</td>
+					<td title="Postgres">No</td>
+					<td title="SQLserver">Yes</td>
+					<td title="IBM DB2 v9.7">No</td>
 					<td title="SQLite 3">Yes</td>
 					<td title="others" class=""></td>
 					<td title="others" class=""></td>
 					<td title="standard"></td>
+					<td title="alternative"></td>
+				</tr>
+				<tr>
+					<td>TIME</td>
+					<td title="MySQL">Yes</td>
+					<td title="Oracle">No</td>
+					<td title="Postgres">Yes</td>
+					<td title="SQLserver">Yes</td>
+					<td title="IBM DB2 v9.7">Yes</td>
+					<td title="SQLite 3">Yes</td>
+					<td title="others" class=""></td>
+					<td title="others" class=""></td>
+					<td title="standard"></td>
+					<td title="alternative"></td>
+				</tr>
+				<tr>
+					<td>TIMESTAMP</td>
+					<td title="MySQL">Yes</td>
+					<td title="Oracle">Yes</td>
+					<td title="Postgres">Yes</td>
+					<td title="SQLserver">No</td>
+					<td title="IBM DB2 v9.7">Yes</td>
+					<td title="SQLite 3">Yes</td>
+					<td title="others" class=""></td>
+					<td title="others" class=""></td>
+					<td title="standard"></td>
+					<td title="alternative"></td>
+				</tr>
+				<tr>
+					<td>INTERVAL</td>
+					<td title="MySQL">?</td>
+					<td title="Oracle">?</td>
+					<td title="Postgres">?</td>
+					<td title="SQLserver">?</td>
+					<td title="IBM DB2">?</td>
+					<td title="SQLite 3">Yes</td>
+					<td title="others" class=""></td>
+					<td title="others" class=""></td>
+					<td title="standard">SQL-92</td>
 					<td title="alternative"></td>
 				</tr>
 				<tr>
@@ -421,61 +476,6 @@
 					<td title="others" class=""></td>
 					<td title="standard"><s>SQL:1999</s></td>
 					<td title="alternative">VARCHAR(8)</td>
-				</tr>
-				<tr>
-					<td colspan="11">Other date/time types</th>
-				</tr>
-				<tr>
-					<td>DATETIME</td>
-					<td title="MySQL">Yes</td>
-					<td title="Oracle">No</td>
-					<td title="Postgres">No</td>
-					<td title="SQLserver">Yes</td>
-					<td title="IBM DB2 v9.7">No</td>
-					<td title="SQLite 3">Yes</td>
-					<td title="others" class=""></td>
-					<td title="others" class=""></td>
-					<td title="standard"></td>
-					<td title="alternative"></td>
-				</tr>
-				<tr>
-					<td>TIME</td>
-					<td title="MySQL">Yes</td>
-					<td title="Oracle">No</td>
-					<td title="Postgres">Yes</td>
-					<td title="SQLserver">Yes</td>
-					<td title="IBM DB2 v9.7">Yes</td>
-					<td title="SQLite 3">Yes</td>
-					<td title="others" class=""></td>
-					<td title="others" class=""></td>
-					<td title="standard"></td>
-					<td title="alternative"></td>
-				</tr>
-				<tr>
-					<td>TIMESTAMP</td>
-					<td title="MySQL">Yes</td>
-					<td title="Oracle">Yes</td>
-					<td title="Postgres">Yes</td>
-					<td title="SQLserver">No</td>
-					<td title="IBM DB2 v9.7">Yes</td>
-					<td title="SQLite 3">Yes</td>
-					<td title="others" class=""></td>
-					<td title="others" class=""></td>
-					<td title="standard"></td>
-					<td title="alternative"></td>
-				</tr>
-				<tr>
-					<td>INTERVAL</td>
-					<td title="MySQL">?</td>
-					<td title="Oracle">?</td>
-					<td title="Postgres">?</td>
-					<td title="SQLserver">?</td>
-					<td title="IBM DB2">?</td>
-					<td title="SQLite 3">Yes</td>
-					<td title="others" class=""></td>
-					<td title="others" class=""></td>
-					<td title="standard">SQL-92</td>
-					<td title="alternative"></td>
 				</tr>
 				<tr>
 					<td colspan="11">Other character types</th>
