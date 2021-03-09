@@ -71,7 +71,8 @@ main table {
 	margin: 40px 20px}
 
 main table thead,
-main table tbody {
+main table tbody,
+main table th {
 	background-color: #eee}
 
 main table th,
@@ -80,6 +81,8 @@ main table td {
 	text-align: center}
 
 main table th {
+	position: sticky;
+	top: 0;
 	vertical-align: top;
 	font-weight: 100}
 
