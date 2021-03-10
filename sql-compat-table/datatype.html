@@ -49,7 +49,7 @@
 					<td title="Postgres">?</td>
 					<td title="SQLserver">?</td>
 					<td title="IBM DB2">?</td>
-					<td title="SQLite 3">Yes</td>
+					<td title="SQLite 3" class="orange">Yes</td>
 					<td title="others" class=""></td>
 					<td title="others" class=""></td>
 					<td title="standard"></td>
@@ -57,78 +57,13 @@
 				</tr>
 				-->
 				<tr>
-					<td>DOUBLE PRECISION</td>
-					<td title="MySQL">Yes</td>
-					<td title="Oracle">Yes</td>
-					<td title="Postgres">Yes</td>
-					<td title="SQLserver" class="green">float(53)</td>
-					<td title="IBM DB2">Yes</td>
-					<td title="SQLite 3" class="orange">REAL</td>
-					<td title="others" class="red">Microsoft Access</td>
-					<td title="Informix v10" class="green">Informix</td>
-					<td title="standard">SQL-92</td>
-					<td title="alternative"></td>
-				</tr>
-				<tr>
-					<td>FLOAT(24)</td>
-					<td title="MySQL" class="green">max 53</td>
-					<td title="Oracle" class="green">max 126</td>
-					<td title="Postgres" class="green">max 53</td>
-					<td title="SQLserver" class="green">max 53</td>
-					<td title="IBM DB2">Yes</td>
-					<td title="SQLite 3" class="orange">REAL</td>
-					<td title="others" class=""></td>
-					<td title="others" class=""></td>
-					<td title="standard">SQL-92</td>
-					<td title="alternative"></td>
-				</tr>
-				<tr>
-					<td>REAL</td>
-					<td title="MySQL">Yes</td>
-					<td title="Oracle">Yes</td>
-					<td title="Postgres">Yes</td>
-					<td title="SQLserver">Yes</td>
-					<td title="IBM DB2">Yes</td>
-					<td title="SQLite 3">Yes</td>
-					<td title="others" class="green">Microsoft Access</td>
-					<td title="Informix v10" class="green">Informix</td>
-					<td title="standard">SQL-92</td>
-					<td title="alternative">FLOAT(24)</td>
-				</tr>
-				<tr>
-					<td>DECIMAL(9,2)</td>
-					<td title="MySQL">Yes</td>
-					<td title="Oracle">Yes</td>
-					<td title="Postgres">Yes</td>
-					<td title="SQLserver">Yes</td>
-					<td title="IBM DB2">Yes</td>
-					<td title="SQLite 3" class="orange">REAL</td>
-					<td title="Informix v10" class="green">Informix</td>
-					<td title="others" class="green">Microsoft Access</td>
-					<td title="standard">SQL-92</td>
-					<td title="alternative">NUMERIC(9,2)</td>
-				</tr>
-				<tr>
-					<td>NUMERIC(9,2)</td>
-					<td title="MySQL">Yes</td>
-					<td title="Oracle">Yes</td>
-					<td title="Postgres">Yes</td>
-					<td title="SQLserver">Yes</td>
-					<td title="IBM DB2">Yes</td>
-					<td title="SQLite 3" class="orange">REAL</td>
-					<td title="others" class="green">Microsoft Access</td>
-					<td title="others" class=""></td>
-					<td title="standard">SQL-92</td>
-					<td title="alternative">DECIMAL(9,2)</td>
-				</tr>
-				<tr>
 					<td>INT</td>
 					<td title="MySQL">Yes</td>
-					<td title="Oracle">Yes</td>
+					<td title="Oracle" class="green">NUMBER(38)</td>
 					<td title="Postgres">Yes</td>
 					<td title="SQLserver">Yes</td>
 					<td title="IBM DB2">Yes</td>
-					<td title="SQLite 3">Yes</td>
+					<td title="SQLite 3" class="orange">INT or TEXT</td>
 					<td title="Microsoft Access, Firebird & Interbase" class="green">Access Firebird Interbase</td>
 					<td title="others" class="green">Informix CUBRID Sybase</td>
 					<td title="standard">SQL-92</td>
@@ -137,11 +72,11 @@
 				<tr>
 					<td>INTEGER</td>
 					<td title="MySQL">Yes</td>
-					<td title="Oracle">Yes</td>
+					<td title="Oracle" class="green">NUMBER(38)</td>
 					<td title="Postgres">Yes</td>
 					<td title="SQLserver">Yes</td>
 					<td title="IBM DB2">Yes</td>
-					<td title="SQLite 3">Yes</td>
+					<td title="SQLite 3" class="orange">INT or TEXT</td>
 					<td title="others" class="green">Microsoft Access</td>
 					<td title="others" class=""></td>
 					<td title="standard">SQL-92</td>
@@ -150,15 +85,93 @@
 				<tr>
 					<td>SMALLINT</td>
 					<td title="MySQL">Yes</td>
-					<td title="Oracle">Yes</td>
+					<td title="Oracle" class="green">NUMBER(38)</td>
 					<td title="Postgres">Yes</td>
 					<td title="SQLserver">Yes</td>
 					<td title="IBM DB2">Yes</td>
-					<td title="SQLite 3" class="orange">INTEGER</td>
+					<td title="SQLite 3" class="orange">INT or TEXT</td>
 					<td title="Microsoft Access, Informix & CUBRID" class="green">Access Informix CUBRID</td>
 					<td title="others" class="green">Firebird & Sybase</td>
 					<td title="standard">SQL-92</td>
 					<td title="alternative"></td>
+				</tr>
+				<tr>
+					<td>DECIMAL(9,2)</td>
+					<td title="MySQL">Yes</td>
+					<td title="Oracle" class="green">NUMBER(9,2)</td>
+					<td title="Postgres">Yes</td>
+					<td title="SQLserver">Yes</td>
+					<td title="IBM DB2">Yes</td>
+					<td title="SQLite 3" class="orange">REAL or TEXT</td>
+					<td title="Informix v10" class="green">Informix</td>
+					<td title="others" class="green">Microsoft Access</td>
+					<td title="standard">SQL-92</td>
+					<td title="alternative">NUMERIC(9,2)</td>
+				</tr>
+				<tr>
+					<td>NUMERIC(9,2)</td>
+					<td title="MySQL">Yes</td>
+					<td title="Oracle" class="green">NUMBER(9,2)</td>
+					<td title="Postgres">Yes</td>
+					<td title="SQLserver">Yes</td>
+					<td title="IBM DB2">Yes</td>
+					<td title="SQLite 3" class="orange">REAL or TEXT</td>
+					<td title="others" class="green">Microsoft Access</td>
+					<td title="others" class=""></td>
+					<td title="standard">SQL-92</td>
+					<td title="alternative">DECIMAL(9,2)</td>
+				</tr>
+				<tr>
+					<td>DOUBLE PRECISION</td>
+					<td title="MySQL" class="green">double-precision (8 bytes)</td>
+					<td title="Oracle" class="green">FLOAT(126)</td>
+					<td title="Postgres" class="green">15 digits (8 bytes)</td>
+					<td title="SQLserver" class="green">FLOAT(53)</td>
+					<td title="IBM DB2" class="green">double-precision</td>
+					<td title="SQLite 3" class="orange">REAL or TEXT</td>
+					<td title="others" class="red">Microsoft Access</td>
+					<td title="Informix v10" class="green">Informix</td>
+					<td title="standard">SQL-92</td>
+					<td title="alternative">FLOAT(53)</td>
+				</tr>
+				<tr>
+					<td>FLOAT</td>
+					<td title="MySQL" class="orange">single-precision (4 bytes)</td>
+					<td title="Oracle" class="green">FLOAT(126)</td>
+					<td title="Postgres" class="green">DOUBLE PRECISION</td>
+					<td title="SQLserver" class="green">FLOAT(53)</td>
+					<td title="IBM DB2" class="green">double-precision</td>
+					<td title="SQLite 3" class="orange">REAL or TEXT</td>
+					<td title="others" class="green">Microsoft Access</td>
+					<td title="others" class=""></td>
+					<td title="standard"></td>
+					<td title="alternative">FLOAT(53)</td>
+				</tr>
+				<tr>
+					<td>FLOAT(24)</td>
+					<td title="MySQL" class="green">max 53</td>
+					<td title="Oracle" class="green">max 126</td>
+					<td title="Postgres" class="green">max 53</td>
+					<td title="SQLserver" class="green">max 53</td>
+					<td title="IBM DB2" class="green">max 53</td>
+					<td title="SQLite 3" class="orange">REAL or TEXT</td>
+					<td title="others" class=""></td>
+					<td title="others" class=""></td>
+					<td title="standard">SQL-92</td>
+					<td title="alternative"></td>
+				</tr>
+				<tr>
+					<td>REAL</td>
+					<td title="MySQL" class="orange">DOUBLE PRECISION</td>
+					<td title="Oracle" class="green">FLOAT(63)</td>
+					<td title="Postgres" class="green">6 digits (4 bytes)</td>
+					<td title="SQLserver" class="green">FLOAT(24)</td>
+					<td title="IBM DB2" class="green">single-precision</td>
+					<td title="SQLite 3" class="orange">REAL or TEXT</td>
+					<td title="others" class="green">Microsoft Access</td>
+					<td title="Informix v10" class="green">Informix</td>
+					<td title="standard">SQL-92</td>
+					<td title="alternative">FLOAT(24)</td>
 				</tr>
 				<tr>
 					<td>CHAR(255)</td>
@@ -167,7 +180,7 @@
 					<td title="Postgres" class="green">max 10485760</td>
 					<td title="SQLserver">Yes</td>
 					<td title="IBM DB2" class="green">max 255<br>254 before v10</td>
-					<td title="SQLite 3" class="orange">TEXT</td>
+					<td title="SQLite 3" class="orange">unlimited TEXT</td>
 					<td title="others" class="green">Firebird Sybase Informix</td>
 					<td title="others" class="green">CUBRID: max 32767</td>
 					<td title="standard">SQL-92</td>
@@ -180,7 +193,7 @@
 					<td title="Postgres" class="green">max 10485760</td>
 					<td title="SQLserver" class="green">max 8000</td>
 					<td title="IBM DB2" class="green">max 32672</td>
-					<td title="SQLite 3" class="orange">TEXT</td>
+					<td title="SQLite 3" class="orange">unlimited TEXT</td>
 					<td title="Informix v10" class="orange">Informix: max 255</td>
 					<td title="others" class="green">Microsoft Access</td>
 					<td title="standard">SQL-92</td>
@@ -242,129 +255,6 @@
 					<td title="alternative"></td>
 				</tr>
 				<tr>
-					<td colspan="11">Binary data</th>
-				</tr>
-				<tr>
-					<td>BLOB</td>
-					<td title="MySQL" class="green">max 65535</td>
-					<td title="Oracle">Yes</td>
-					<td title="Postgres">No</td>
-					<td title="SQLserver">No</td>
-					<td title="IBM DB2" class="green">max 2GB</td>
-					<td title="SQLite 3">Yes</td>
-					<td title="others" class="green">Sybase</td>
-					<td title="others" class="red">Microsoft Access</td>
-					<td title="standard"></td>
-					<td title="alternative">VARCHAR(4000)<br>insert Base64(val); select ToString(col)</td>
-				</tr>
-				<tr>
-					<td>BYTEA</td>
-					<td title="MySQL">No</td>
-					<td title="Oracle">No</td>
-					<td title="Postgres" class="green">Up to 1GB</td>
-					<td title="SQLserver">No</td>
-					<td title="IBM DB2">No</td>
-					<td title="SQLite 3">Yes</td>
-					<td title="others" class="red">Microsoft Access</td>
-					<td title="others" class=""></td>
-					<td title="standard"></td>
-					<td title="alternative">VARCHAR(4000)<br>insert Base64(val); select ToString(col)</td>
-				</tr>
-				<tr>
-					<td>BINARY(32)</td>
-					<td title="MySQL" class="green">max 255</td>
-					<td title="Oracle">No</td>
-					<td title="Postgres">No</td>
-					<td title="SQLserver" class="green">max 8000</td>
-					<td title="IBM DB2 v10" class="green">max 255</td>
-					<td title="SQLite 3" class="orange">BLOB</td>
-					<td title="others" class="green">Sybase: max 32767</td>
-					<td title="others" class="green">Microsoft Access</td>
-					<td title="standard">SQL:2008</td>
-					<td title="alternative">CHAR(64)<br>insert Hex(val); select UnHex(col)</td>
-				</tr>
-				<tr>
-					<td>VARBINARY(3000)</td>
-					<td title="MySQL" class="green">max 65535</td>
-					<td title="Oracle">No</td>
-					<td title="Postgres">No</td>
-					<td title="SQLserver" class="green">max 8000</td>
-					<td title="IBM DB2 v10" class="green">max 32704</td>
-					<td title="SQLite 3" class="orange">BLOB</td>
-					<td title="others" class="green">Sybase: max 32767</td>
-					<td title="others" class="green">Microsoft Access</td>
-					<td title="standard"></td>
-					<td title="alternative">VARCHAR(4000)<br>insert Base64(val); select ToString(col)</td>
-				</tr>
-				<tr>
-					<td colspan="11">Date/time types</th>
-				</tr>
-				<tr>
-					<td>DATE</td>
-					<td title="MySQL">Yes</td>
-					<td title="Oracle" class="orange">DATETIME</td>
-					<td title="Postgres">Yes</td>
-					<td title="SQLserver">Yes</td>
-					<td title="IBM DB2 v8.2">Yes</td>
-					<td title="SQLite 3" class="orange">TEXT or INT</td>
-					<td title="others" class=""></td>
-					<td title="others" class=""></td>
-					<td title="standard">SQL-92</td>
-					<td title="alternative"></td>
-				</tr>
-				<tr>
-					<td>DATETIME</td>
-					<td title="MySQL">Yes</td>
-					<td title="Oracle">No</td>
-					<td title="Postgres">No</td>
-					<td title="SQLserver">Yes</td>
-					<td title="IBM DB2 v9.7">No</td>
-					<td title="SQLite 3" class="orange">TEXT or INT</td>
-					<td title="others" class=""></td>
-					<td title="others" class=""></td>
-					<td title="standard"></td>
-					<td title="alternative"></td>
-				</tr>
-				<tr>
-					<td>TIME</td>
-					<td title="MySQL">Yes</td>
-					<td title="Oracle">No</td>
-					<td title="Postgres">Yes</td>
-					<td title="SQLserver">Yes</td>
-					<td title="IBM DB2 v9.7">Yes</td>
-					<td title="SQLite 3" class="orange">TEXT or INT</td>
-					<td title="others" class=""></td>
-					<td title="others" class=""></td>
-					<td title="standard"></td>
-					<td title="alternative"></td>
-				</tr>
-				<tr>
-					<td>TIMESTAMP</td>
-					<td title="MySQL">Yes</td>
-					<td title="Oracle">Yes</td>
-					<td title="Postgres">Yes</td>
-					<td title="SQLserver">No</td>
-					<td title="IBM DB2 v9.7">Yes</td>
-					<td title="SQLite 3" class="orange">TEXT or INT</td>
-					<td title="others" class=""></td>
-					<td title="others" class=""></td>
-					<td title="standard"></td>
-					<td title="alternative"></td>
-				</tr>
-				<tr>
-					<td>INTERVAL</td>
-					<td title="MySQL">?</td>
-					<td title="Oracle">?</td>
-					<td title="Postgres">?</td>
-					<td title="SQLserver">?</td>
-					<td title="IBM DB2">?</td>
-					<td title="SQLite 3" class="orange">INT</td>
-					<td title="others" class=""></td>
-					<td title="others" class=""></td>
-					<td title="standard">SQL-92</td>
-					<td title="alternative"></td>
-				</tr>
-				<tr>
 					<td colspan="11">Other column properties</th>
 				</tr>
 				<tr>
@@ -373,7 +263,7 @@
 					<td title="Oracle">No</td>
 					<td title="Postgres">?</td>
 					<td title="SQLserver">No</td>
-					<td title="IBM DB2">?</td>
+					<td title="IBM DB2">No</td>
 					<td title="SQLite 3">No</td>
 					<td title="others" class="red">Sybase</td>
 					<td title="others" class=""></td>
@@ -417,7 +307,117 @@
 					<td title="Microsoft Access, Firebird & CUBRID" class="red">Access Firebird CUBRID</td>
 					<td title="others" class="green">Sybase</td>
 					<td title="standard"></td>
-					<td title="alternative">INSERT INTO tab (col) VALUES (int - 2147483647)<br>SELECT col + 2147483647 FROM tab</td>
+					<td title="alternative">INSERT INTO tab (col) VALUES (int-2147483647)<br>SELECT col+2147483647 FROM tab</td>
+				</tr>
+				<tr>
+					<td colspan="11">Date/time types</th>
+				</tr>
+				<tr>
+					<td>DATE</td>
+					<td title="MySQL">Yes</td>
+					<td title="Oracle" class="orange">date + time</td>
+					<td title="Postgres">Yes</td>
+					<td title="SQLserver">Yes</td>
+					<td title="IBM DB2 v8.2">Yes</td>
+					<td title="SQLite 3" class="orange">TEXT or INT</td>
+					<td title="others" class=""></td>
+					<td title="others" class=""></td>
+					<td title="standard">SQL-92</td>
+					<td title="alternative">INT</td>
+				</tr>
+				<tr>
+					<td>DATETIME</td>
+					<td title="MySQL">Yes</td>
+					<td title="Oracle">No</td>
+					<td title="Postgres">No</td>
+					<td title="SQLserver">Yes</td>
+					<td title="IBM DB2 v9.7">No</td>
+					<td title="SQLite 3" class="orange">TEXT or INT</td>
+					<td title="others" class=""></td>
+					<td title="others" class=""></td>
+					<td title="standard"></td>
+					<td title="alternative">INT</td>
+				</tr>
+				<tr>
+					<td>TIME</td>
+					<td title="MySQL">Yes</td>
+					<td title="Oracle">No</td>
+					<td title="Postgres">Yes</td>
+					<td title="SQLserver">Yes</td>
+					<td title="IBM DB2 v9.7">Yes</td>
+					<td title="SQLite 3" class="orange">TEXT or INT</td>
+					<td title="others" class=""></td>
+					<td title="others" class=""></td>
+					<td title="standard"></td>
+					<td title="alternative">INT</td>
+				</tr>
+				<tr>
+					<td>TIMESTAMP</td>
+					<td title="MySQL">Yes</td>
+					<td title="Oracle">Yes</td>
+					<td title="Postgres">Yes</td>
+					<td title="SQLserver">No</td>
+					<td title="IBM DB2 v9.7">Yes</td>
+					<td title="SQLite 3" class="orange">TEXT or INT</td>
+					<td title="others" class=""></td>
+					<td title="others" class=""></td>
+					<td title="standard"></td>
+					<td title="alternative">INT</td>
+				</tr>
+				<tr>
+					<td colspan="11">Binary data</th>
+				</tr>
+				<tr>
+					<td>BLOB</td>
+					<td title="MySQL" class="green">max 65535</td>
+					<td title="Oracle">Yes</td>
+					<td title="Postgres">No</td>
+					<td title="SQLserver">No</td>
+					<td title="IBM DB2" class="green">max 2GB</td>
+					<td title="SQLite 3">Yes</td>
+					<td title="others" class="green">Sybase</td>
+					<td title="others" class="red">Microsoft Access</td>
+					<td title="standard"></td>
+					<td title="alternative">VARCHAR(4000)<br>insert to_base64(val); select from_base64(col)</td>
+				</tr>
+				<tr>
+					<td>BYTEA</td>
+					<td title="MySQL">No</td>
+					<td title="Oracle">No</td>
+					<td title="Postgres" class="green">Up to 1GB</td>
+					<td title="SQLserver">No</td>
+					<td title="IBM DB2">No</td>
+					<td title="SQLite 3" class="green">BLOB</td>
+					<td title="others" class="red">Microsoft Access</td>
+					<td title="others" class=""></td>
+					<td title="standard"></td>
+					<td title="alternative">VARCHAR(4000)<br>insert to_base64(val); select from_base64(col)</td>
+				</tr>
+				<tr>
+					<td>BINARY(32)</td>
+					<td title="MySQL" class="green">max 255</td>
+					<td title="Oracle">No</td>
+					<td title="Postgres">No</td>
+					<td title="SQLserver" class="green">max 8000</td>
+					<td title="IBM DB2 v10" class="green">max 255</td>
+					<td title="SQLite 3" class="orange">BLOB</td>
+					<td title="others" class="green">Sybase: max 32767</td>
+					<td title="others" class="green">Microsoft Access</td>
+					<td title="standard">SQL:2008</td>
+					<td title="alternative">CHAR(64)<br>insert hex(val); select unhex(col)</td>
+				</tr>
+				<tr>
+					<td>VARBINARY(3000)</td>
+					<td title="MySQL" class="green">max 65535</td>
+					<td title="Oracle">No</td>
+					<td title="Postgres">No</td>
+					<td title="SQLserver" class="green">max 8000</td>
+					<td title="IBM DB2 v10" class="green">max 32704</td>
+					<td title="SQLite 3" class="orange">BLOB</td>
+					<td title="others" class="green">Sybase: max 32767</td>
+					<td title="others" class="green">Microsoft Access</td>
+					<td title="standard"></td>
+					<td title="alternative">VARCHAR(4000)<br>insert to_base64(val); select from_base64(col)</td>
 				</tr>
 				<tr>
 					<td colspan="11">Other binary data</th>
@@ -429,7 +429,7 @@
 					<td title="Postgres">No</td>
 					<td title="SQLserver">No</td>
 					<td title="IBM DB2" class="green">max 2GB</td>
-					<td title="SQLite 3">Yes</td>
+					<td title="SQLite 3" class="green">BLOB</td>
 					<td title="others" class=""></td>
 					<td title="others" class=""></td>
 					<td title="standard"></td>
@@ -442,11 +442,11 @@
 					<td title="Postgres">?</td>
 					<td title="SQLserver">Deprecated</td>
 					<td title="IBM DB2">?</td>
-					<td title="SQLite 3">Yes</td>
+					<td title="SQLite 3" class="green">BLOB</td>
 					<td title="others" class=""></td>
 					<td title="others" class=""></td>
 					<td title="standard"></td>
-					<td title="alternative">VARCHAR(4000)<br>insert Base64(val); select ToString(col)</td>
+					<td title="alternative">VARCHAR(4000)<br>insert to_base64(val); select from_base64(col)</td>
 				</tr>
 				<tr>
 					<td colspan="11">Other boolean types</th>
@@ -458,7 +458,7 @@
 					<td title="Postgres">Yes</td>
 					<td title="SQLserver" class="red">BIT</td>
 					<td title="IBM DB2 v9.7">Yes</td>
-					<td title="SQLite 3" class="orange">TEXT or INT</td>
+					<td title="SQLite 3" class="orange">INT</td>
 					<td title="others" class=""></td>
 					<td title="others" class=""></td>
 					<td title="standard">SQL:1999</td>
@@ -500,7 +500,7 @@
 					<td title="Postgres">?</td>
 					<td title="SQLserver">Yes</td>
 					<td title="IBM DB2">?</td>
-					<td title="SQLite 3" class="orange">TEXT</td>
+					<td title="SQLite 3" class="orange">unlimited TEXT</td>
 					<td title="others" class=""></td>
 					<td title="others" class=""></td>
 					<td title="standard"></td>
@@ -513,7 +513,7 @@
 					<td title="Postgres">?</td>
 					<td title="SQLserver">Deprecated</td>
 					<td title="IBM DB2">?</td>
-					<td title="SQLite 3">Yes</td>
+					<td title="SQLite 3" class="green">TEXT</td>
 					<td title="others" class=""></td>
 					<td title="others" class=""></td>
 					<td title="standard"></td>
@@ -526,7 +526,7 @@
 					<td title="Postgres">?</td>
 					<td title="SQLserver">Yes</td>
 					<td title="IBM DB2">?</td>
-					<td title="SQLite 3" class="orange">TEXT</td>
+					<td title="SQLite 3" class="orange">unlimited TEXT</td>
 					<td title="Informix v10" class="orange">Informix: max 255</td>
 					<td title="others" class=""></td>
 					<td title="standard"></td>
@@ -539,7 +539,7 @@
 					<td title="Postgres">?</td>
 					<td title="SQLserver">?</td>
 					<td title="IBM DB2">?</td>
-					<td title="SQLite 3" class="orange">TEXT</td>
+					<td title="SQLite 3" class="orange">unlimited TEXT</td>
 					<td title="Informix v10" class="green">Informix: max 32739</td>
 					<td title="others" class=""></td>
 					<td title="standard"></td>
@@ -565,7 +565,7 @@
 					<td title="Postgres">?</td>
 					<td title="SQLserver">Yes</td>
 					<td title="IBM DB2">?</td>
-					<td title="SQLite 3" class="orange">TEXT</td>
+					<td title="SQLite 3" class="orange">unlimited TEXT</td>
 					<td title="others" class=""></td>
 					<td title="others" class=""></td>
 					<td title="standard">SQL-92</td>
@@ -578,7 +578,7 @@
 					<td title="Postgres">?</td>
 					<td title="SQLserver">Yes</td>
 					<td title="IBM DB2">?</td>
-					<td title="SQLite 3" class="orange">TEXT</td>
+					<td title="SQLite 3" class="orange">unlimited TEXT</td>
 					<td title="others" class=""></td>
 					<td title="others" class=""></td>
 					<td title="standard">SQL-92</td>
@@ -594,7 +594,7 @@
 					<td title="Postgres">Yes</td>
 					<td title="SQLserver">Yes</td>
 					<td title="IBM DB2">Yes</td>
-					<td title="SQLite 3">Yes</td>
+					<td title="SQLite 3" class="orange">INT or TEXT</td>
 					<td title="others" class="green">Firebird & Interbase</td>
 					<td title="others" class="green">Sybase Informix CUBRID</td>
 					<td title="standard">SQL:2003</td>
@@ -606,8 +606,8 @@
 					<td title="Oracle">No</td>
 					<td title="Postgres">No</td>
 					<td title="SQLserver">Yes</td>
-					<td title="IBM DB2">?</td>
-					<td title="SQLite 3" class="orange">REAL</td>
+					<td title="IBM DB2">Yes</td>
+					<td title="SQLite 3" class="orange">REAL or TEXT</td>
 					<td title="others" class=""></td>
 					<td title="others" class=""></td>
 					<td title="standard"></td>
@@ -620,7 +620,7 @@
 					<td title="Postgres">No</td>
 					<td title="SQLserver">No</td>
 					<td title="IBM DB2">No</td>
-					<td title="SQLite 3" class="orange">INTEGER</td>
+					<td title="SQLite 3" class="orange">INT or TEXT</td>
 					<td title="others" class="red">Microsoft Access & Firebird</td>
 					<td title="others" class="red">Sybase & CUBRID</td>
 					<td title="standard"></td>
@@ -633,7 +633,7 @@
 					<td title="Postgres">No</td>
 					<td title="SQLserver" class="orange">unsigned</td>
 					<td title="IBM DB2">No</td>
-					<td title="SQLite 3" class="orange">INTEGER</td>
+					<td title="SQLite 3" class="orange">INT or TEXT</td>
 					<td title="others" class="green">Sybase (signed)</td>
 					<td title="others" class="red">Firebird & CUBRID</td>
 					<td title="standard">SQL-92</td>
@@ -646,7 +646,7 @@
 					<td title="Postgres">No</td>
 					<td title="SQLserver">No</td>
 					<td title="IBM DB2">Yes</td>
-					<td title="SQLite 3" class="orange">REAL</td>
+					<td title="SQLite 3" class="orange">REAL or TEXT</td>
 					<td title="Informix v10" class="red">Informix</td>
 					<td title="others" class="green">Microsoft Access</td>
 					<td title="standard"></td>
@@ -659,7 +659,7 @@
 					<td title="Postgres">Yes</td>
 					<td title="SQLserver">?</td>
 					<td title="IBM DB2">?</td>
-					<td title="SQLite 3" class="orange">INTEGER</td>
+					<td title="SQLite 3" class="orange">INT or TEXT</td>
 					<td title="Informix v10" class="green">Informix</td>
 					<td title="others" class=""></td>
 					<td title="standard"></td>
@@ -673,7 +673,7 @@
 					<td title="Postgres">?</td>
 					<td title="SQLserver">?</td>
 					<td title="IBM DB2">?</td>
-					<td title="SQLite 3">Yes</td>
+					<td title="SQLite 3" class="orange">Yes</td>
 					<td title="others" class=""></td>
 					<td title="others" class=""></td>
 					<td title="standard"></td>

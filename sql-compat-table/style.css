@@ -61,7 +61,7 @@ main p {
 main p span {
 	font-size: 0.75rem;
 	padding: 2px 9px;
-	margin: 0 4px 0 9px}
+	margin: 0 4px 0 20px}
 
 main p span:last-child {
 	background-color: #eee}
