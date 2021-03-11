@@ -239,7 +239,7 @@
 					<td title="others" class="red">Firebird</td>
 					<td title="others" class=""></td>
 					<td title="standard">SQL:2008</td>
-					<td title="alternative">DROP TABLE tab<br>CREATE TABLE tab ...</td>
+					<td title="alternative">DROP TABLE tab1<br>CREATE TABLE tab1 (...)</td>
 				</tr>
 				<tr>
 					<td>RENAME TABLE tab TO tab2</td>
@@ -252,7 +252,7 @@
 					<td title="others" class=""></td>
 					<td title="others" class=""></td>
 					<td title="standard"></td>
-					<td title="alternative">CREATE TABLE tab2(...)<br>INSERT INTO tab2 SELECT * FROM tab<br>DROP TABLE tab</td>
+					<td title="alternative">CREATE TABLE tab2 (...)<br>INSERT INTO tab2 SELECT * FROM tab<br>DROP TABLE tab</td>
 				</tr>
 				<tr>
 					<td>ALTER TABLE tab RENAME TO tab2</td>
@@ -265,7 +265,7 @@
 					<td title="others" class=""></td>
 					<td title="others" class=""></td>
 					<td title="standard"></td>
-					<td title="alternative">CREATE TABLE tab2(...)<br>INSERT INTO tab2 SELECT * FROM tab<br>DROP TABLE tab</td>
+					<td title="alternative">CREATE TABLE tab2 (...)<br>INSERT INTO tab2 SELECT * FROM tab<br>DROP TABLE tab</td>
 				</tr>
 				<tr>
 					<td colspan="11">Column modifications</th>
@@ -346,7 +346,7 @@
 					<td title="others" class=""></td>
 					<td title="others" class=""></td>
 					<td title="standard"></td>
-					<td title="alternative">CREATE TABLE tab2(...col INT)<br>INSERT INTO tab2 SELECT ...col FROM tab<br>DROP TABLE tab<br>CREATE TABLE tab(... col INT)<br>INSERT INTO tab SELECT ...col FROM tab2<br>DROP TABLE tab2</td>
+					<td title="alternative">CREATE TABLE tab2 (...col INT)<br>INSERT INTO tab2 SELECT ...col FROM tab<br>DROP TABLE tab<br>CREATE TABLE tab (... col INT)<br>INSERT INTO tab SELECT ...col FROM tab2<br>DROP TABLE tab2</td>
 				</tr>
 				<tr>
 					<td colspan="12">Join syntax</th>

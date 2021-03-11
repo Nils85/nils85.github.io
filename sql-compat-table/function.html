@@ -352,10 +352,12 @@
 		<div>
 			Notes
 			<ul>
-				<li>It is possible to create stored procedures for unavailable functions in your database system (except with SQLite)</li>
-				<li>It is also possible to replace a function by a more compatible SQL keyword</li>
-				<li>...WHERE SUBSTR(col,0,3) = 'abc' <b>can be replaced by</b> ...WHERE col LIKE 'abc%'</li>
-				<li>...WHERE LENGTH(col) = 3 <b>can be replaced by</b> ...WHERE col LIKE '___'</li>
+				<li>It's possible to create stored procedures for unavailable functions in your database system (except with SQLite)</li>
+				<li>
+					Some functions used with WHERE can be replaced by the keyword LIKE:<br>
+					...WHERE SUBSTR(col,0,3) = 'abc' <b>can be replaced by</b> ...WHERE col LIKE 'abc%'<br>
+					...WHERE LENGTH(col) = 3 <b>can be replaced by</b> ...WHERE col LIKE '___'
+				</li>
 			</ul>
 			Reference manuals
 			<ul>

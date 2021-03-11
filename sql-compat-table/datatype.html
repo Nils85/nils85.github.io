@@ -449,7 +449,7 @@
 					<td title="alternative">VARCHAR(4000)<br>insert to_base64(val); select from_base64(col)</td>
 				</tr>
 				<tr>
-					<td colspan="11">Other boolean types</th>
+					<td colspan="11">Boolean types</th>
 				</tr>
 				<tr>
 					<td>BOOLEAN</td>
@@ -590,7 +590,7 @@
 				<tr>
 					<td>BIGINT</td>
 					<td title="MySQL">Yes</td>
-					<td title="Oracle" class="red">number(19)</td>
+					<td title="Oracle" class="red">NUMBER(19)</td>
 					<td title="Postgres">Yes</td>
 					<td title="SQLserver">Yes</td>
 					<td title="IBM DB2">Yes</td>
@@ -686,6 +686,10 @@
 			Notes
 			<ul>
 				<li>SQLite accepts anything as column type because each value are dynamically typed</li>
+				<li>DATE literals can have different format across database systems</li>
+				<li>PostgreSQL needs only 1 byte of overhead to store short string up to VARCHAR(126)</li>
+				<li>MySQL and MariaDB need only 1 byte of overhead to store string up to VARCHAR(255)</li>
+				<li>DECIMAL or NUMERIC type with precision greater than 9 require more storage</li>
 			</ul>
 			Reference manuals
 			<ul>
