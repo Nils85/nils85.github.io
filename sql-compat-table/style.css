@@ -11,7 +11,7 @@ header {
 	font-size: 1.25rem;
 	background-color: #454545}
 
-header img {
+header > img {
 	vertical-align: middle;
 	width: 40px;
 	height: 40px;
@@ -35,13 +35,13 @@ header > a[href="#"] {
 	background-color: #eee}
 
 header div {
-	padding: 18px 40px;
+	padding: 18px 50px;
 	font-size: 0.75rem;
 	float: right}
 
 header a.button {
 	text-decoration: none;
-	margin-left: 9px;
+	margin-left: 20px;
 	padding: 2px 5px;
 	font-weight: bold;
 	background-color: #eee;
@@ -50,6 +50,12 @@ header a.button {
 	border: 1px solid #d5d5d5;
 	color: #333;
 	border-radius: 3px}
+
+header a.button img {
+	vertical-align: bottom;
+	margin-right: 5px;
+	width: 13px;
+	height: 13px}
 
 main p,
 main div {

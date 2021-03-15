@@ -8,7 +8,9 @@ Like one "universal" SQL language understood by everybody.
 The answer is yes... if you restrict yourself to the common keywords compatible across database systems.  
 Actually the SQL language is standardized but unfortunately these standards are not always respected by database vendors.
 
-The goal of this project is to have enough information with these compatibility tables to write a universal SQL reference manual for all developers who want to write agnostic SQL query.
+So after seeing the [ECMAScript compatibility table](https://kangax.github.io/compat-table) for JavaScript I decided to create the same thing for the SQL language.
+
+The goal of this project is to have enough information with these compatibility tables to write an universal SQL reference manual for all developers who want to write agnostic SQL query.
 
 ## Online documentation
 
