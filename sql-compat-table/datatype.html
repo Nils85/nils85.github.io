@@ -686,10 +686,11 @@
 			Notes
 			<ul>
 				<li>SQLite accepts anything as column type because each value are dynamically typed</li>
-				<li>DATE literals can have different format across database systems</li>
+				<li>Date literals can have different format across database systems</li>
 				<li>PostgreSQL needs only 1 byte of overhead to store short string up to VARCHAR(126)</li>
 				<li>MySQL and MariaDB need only 1 byte of overhead to store string up to VARCHAR(255)</li>
 				<li>DECIMAL or NUMERIC type with precision greater than 9 require more storage</li>
+				<li>Always use single quote for string or date literal (never use double quotes)</li>
 			</ul>
 			Reference manuals
 			<ul>

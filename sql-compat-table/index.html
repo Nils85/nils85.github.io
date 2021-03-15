@@ -70,7 +70,7 @@
 					<td title="alternative"></td>
 				</tr>
 				<tr>
-					<td>INSERT INTO tab (col...) VALUE<b>S</b> (...),(...)</td>
+					<td>INSERT INTO tbl (col...) VALUE<b>S</b> (...),(...)</td>
 					<td title="MySQL">Yes</td>
 					<td title="Oracle">?</td>
 					<td title="Postgres">Yes</td>
@@ -83,7 +83,7 @@
 					<td title="alternative"></td>
 				</tr>
 				<tr>
-					<td>SELECT * FROM tab</td>
+					<td>SELECT * FROM tbl</td>
 					<td title="MySQL">Yes</td>
 					<td title="Oracle">Yes</td>
 					<td title="Postgres">Yes</td>
@@ -96,7 +96,7 @@
 					<td title="alternative"></td>
 				</tr>
 				<tr>
-					<td>DELETE FROM tab</td>
+					<td>DELETE FROM tbl</td>
 					<td title="MySQL">Yes</td>
 					<td title="Oracle">?</td>
 					<td title="Postgres">Yes</td>
@@ -109,7 +109,7 @@
 					<td title="alternative"></td>
 				</tr>
 				<tr>
-					<td>UPDATE tab SET col1 = val1, col2 = val2</td>
+					<td>UPDATE tbl SET col1 = val1, col2 = val2</td>
 					<td title="MySQL">Yes</td>
 					<td title="Oracle">Yes</td>
 					<td title="Postgres">Yes</td>
@@ -239,10 +239,10 @@
 					<td title="others" class="red">Firebird</td>
 					<td title="others" class=""></td>
 					<td title="standard">SQL:2008</td>
-					<td title="alternative">DROP TABLE tab1<br>CREATE TABLE tab1 (...)</td>
+					<td title="alternative">DROP TABLE tbl1<br>CREATE TABLE tbl1 (...)</td>
 				</tr>
 				<tr>
-					<td>RENAME TABLE tab TO tab2</td>
+					<td>RENAME TABLE tbl TO tbl2</td>
 					<td title="MySQL">Yes</td>
 					<td title="Oracle" class="red">RENAME <s>TABLE</s>...</td>
 					<td title="Postgres">No</td>
@@ -252,10 +252,10 @@
 					<td title="others" class=""></td>
 					<td title="others" class=""></td>
 					<td title="standard"></td>
-					<td title="alternative">CREATE TABLE tab2 (...)<br>INSERT INTO tab2 SELECT * FROM tab<br>DROP TABLE tab</td>
+					<td title="alternative">CREATE TABLE tbl2 (...)<br>INSERT INTO tbl2 SELECT * FROM tbl<br>DROP TABLE tbl</td>
 				</tr>
 				<tr>
-					<td>ALTER TABLE tab RENAME TO tab2</td>
+					<td>ALTER TABLE tbl RENAME TO tbl2</td>
 					<td title="MySQL">Yes</td>
 					<td title="Oracle 11g">Yes</td>
 					<td title="Postgres 9.6">Yes</td>
@@ -265,13 +265,120 @@
 					<td title="others" class=""></td>
 					<td title="others" class=""></td>
 					<td title="standard"></td>
-					<td title="alternative">CREATE TABLE tab2 (...)<br>INSERT INTO tab2 SELECT * FROM tab<br>DROP TABLE tab</td>
+					<td title="alternative">CREATE TABLE tbl2 (...)<br>INSERT INTO tbl2 SELECT * FROM tbl<br>DROP TABLE tbl</td>
+				</tr>
+				<tr>
+					<td colspan="11">Foreign key</th>
+				</tr>
+				<tr>
+					<td>CREATE TABLE tbl1 (... FOREIGN KEY (col1) REFERENCES tbl2 (col2))</td>
+					<td title="MySQL" class="green">RESTRICT</td>
+					<td title="Oracle" class="green">only ON DELETE no action</td>
+					<td title="Postgres" class="green">NO ACTION</td>
+					<td title="SQLserver" class="green">NO ACTION</td>
+					<td title="IBM DB2">?</td>
+					<td title="SQLite 3" class="green">NO ACTION</td>
+					<td title="others" class=""></td>
+					<td title="others" class=""></td>
+					<td title="standard"></td>
+					<td title="alternative"></td>
+				</tr>
+				<tr>
+					<td>... CONSTRAINT fk1 FOREIGN KEY ...</td>
+					<td title="MySQL">Yes</td>
+					<td title="Oracle">Yes</td>
+					<td title="Postgres">Yes</td>
+					<td title="SQLserver">Yes</td>
+					<td title="IBM DB2">?</td>
+					<td title="SQLite 3">Yes</td>
+					<td title="others" class=""></td>
+					<td title="others" class=""></td>
+					<td title="standard"></td>
+					<td title="alternative"></td>
+				</tr>
+				<tr>
+					<td>... ON DELETE CASCADE</td>
+					<td title="MySQL">Yes</td>
+					<td title="Oracle 10g">Yes</td>
+					<td title="Postgres">Yes</td>
+					<td title="SQLserver">Yes</td>
+					<td title="IBM DB2">?</td>
+					<td title="SQLite 3">Yes</td>
+					<td title="others" class=""></td>
+					<td title="others" class=""></td>
+					<td title="standard"></td>
+					<td title="alternative"></td>
+				</tr>
+				<tr>
+					<td>... ON DELETE SET NULL</td>
+					<td title="MySQL">Yes</td>
+					<td title="Oracle 10g">Yes</td>
+					<td title="Postgres">Yes</td>
+					<td title="SQLserver">Yes</td>
+					<td title="IBM DB2">?</td>
+					<td title="SQLite 3">Yes</td>
+					<td title="others" class=""></td>
+					<td title="others" class=""></td>
+					<td title="standard"></td>
+					<td title="alternative"></td>
+				</tr>
+				<tr>
+					<td><s>... ON DELETE NO ACTION</s></td>
+					<td title="MySQL" class="green">RESTRICT</td>
+					<td title="Oracle" class="red">Not explicitly</td>
+					<td title="Postgres">Yes</td>
+					<td title="SQLserver">Yes</td>
+					<td title="IBM DB2">?</td>
+					<td title="SQLite 3">Yes</td>
+					<td title="others" class=""></td>
+					<td title="others" class=""></td>
+					<td title="standard"></td>
+					<td title="alternative">CREATE TABLE tbl1 (...<br>FOREIGN KEY (col1) REFERENCES tbl2 (col2))</td>
+				</tr>
+				<tr>
+					<td><s>... ON DELETE RESTRICT</s></td>
+					<td title="MySQL">Yes</td>
+					<td title="Oracle">?</td>
+					<td title="Postgres">Yes</td>
+					<td title="SQLserver">No</td>
+					<td title="IBM DB2">?</td>
+					<td title="SQLite 3">Yes</td>
+					<td title="others" class=""></td>
+					<td title="others" class=""></td>
+					<td title="standard"></td>
+					<td title="alternative">CREATE TABLE tbl1 (...<br>FOREIGN KEY (col1) REFERENCES tbl2 (col2))</td>
+				</tr>
+				<tr>
+					<td><s>... ON DELETE SET DEFAULT</s></td>
+					<td title="MySQL" class="red">InnoDB reject it</td>
+					<td title="Oracle">?</td>
+					<td title="Postgres">Yes</td>
+					<td title="SQLserver">Yes</td>
+					<td title="IBM DB2">?</td>
+					<td title="SQLite 3">Yes</td>
+					<td title="others" class=""></td>
+					<td title="others" class=""></td>
+					<td title="standard"></td>
+					<td title="alternative"></td>
+				</tr>
+				<tr>
+					<td>... ON UPDATE ...</td>
+					<td title="MySQL">Yes</td>
+					<td title="Oracle 12">No</td>
+					<td title="Postgres">Yes</td>
+					<td title="SQLserver">Yes</td>
+					<td title="IBM DB2">?</td>
+					<td title="SQLite 3">Yes</td>
+					<td title="others" class=""></td>
+					<td title="others" class=""></td>
+					<td title="standard"></td>
+					<td title="alternative"></td>
 				</tr>
 				<tr>
 					<td colspan="11">Column modifications</th>
 				</tr>
 				<tr>
-					<td>ALTER TABLE tab ADD col VARCHAR(20) NULL</td>
+					<td>ALTER TABLE tbl ADD col VARCHAR(20) NULL</td>
 					<td title="MySQL">Yes</td>
 					<td title="Oracle">?</td>
 					<td title="Postgres">Yes</td>
@@ -284,7 +391,7 @@
 					<td title="alternative"></td>
 				</tr>
 				<tr>
-					<td>ALTER TABLE tab DROP COLUMN col</td>
+					<td>ALTER TABLE tbl DROP COLUMN col</td>
 					<td title="MySQL">Yes</td>
 					<td title="Oracle">?</td>
 					<td title="Postgres">Yes</td>
@@ -297,7 +404,7 @@
 					<td title="alternative"></td>
 				</tr>
 				<tr>
-					<td>ALTER TABLE tab CHANGE col1 col2 INT NOT NULL</td>
+					<td>ALTER TABLE tbl CHANGE col1 col2 INT NOT NULL</td>
 					<td title="MySQL">Yes</td>
 					<td title="Oracle">?</td>
 					<td title="Postgres">?</td>
@@ -307,10 +414,10 @@
 					<td title="others" class=""></td>
 					<td title="others" class=""></td>
 					<td title="standard"></td>
-					<td title="alternative">ALTER TABLE tab ADD col2 INT<br>UPDATE tab SET col2 = col1<br>ALTER TABLE tab DROP COLUMN col1</td>
+					<td title="alternative">ALTER TABLE tbl ADD col2 INT<br>UPDATE tbl SET col2 = col1<br>ALTER TABLE tbl DROP COLUMN col1</td>
 				</tr>
 				<tr>
-					<td>ALTER TABLE tab RENAME COLUMN col1 TO col2</td>
+					<td>ALTER TABLE tbl RENAME COLUMN col1 TO col2</td>
 					<td title="MySQL 8.0" class="orange">since v8.0</td>
 					<td title="Oracle">?</td>
 					<td title="Postgres 9.6">Yes</td>
@@ -320,10 +427,10 @@
 					<td title="others" class=""></td>
 					<td title="others" class=""></td>
 					<td title="standard"></td>
-					<td title="alternative">ALTER TABLE tab ADD col2 INT<br>UPDATE tab SET col2 = col1<br>ALTER TABLE tab DROP COLUMN col1</td>
+					<td title="alternative">ALTER TABLE tbl ADD col2 INT<br>UPDATE tbl SET col2 = col1<br>ALTER TABLE tbl DROP COLUMN col1</td>
 				</tr>
 				<tr>
-					<td>ALTER TABLE tab MODIFY col INT NOT NULL</td>
+					<td>ALTER TABLE tbl MODIFY col INT NOT NULL</td>
 					<td title="MySQL">Yes</td>
 					<td title="Oracle">Yes</td>
 					<td title="Postgres">?</td>
@@ -333,10 +440,10 @@
 					<td title="others" class=""></td>
 					<td title="others" class=""></td>
 					<td title="standard"></td>
-					<td title="alternative">ALTER TABLE tab ADD col2 INT<br>UPDATE tab SET col2 = col<br>ALTER TABLE tab DROP COLUMN col<br>ALTER TABLE tab ADD col INT<br>UPDATE tab SET col = col2</td>
+					<td title="alternative">ALTER TABLE tbl ADD col2 INT<br>UPDATE tbl SET col2 = col<br>ALTER TABLE tbl DROP COLUMN col<br>ALTER TABLE tbl ADD col INT<br>UPDATE tbl SET col = col2</td>
 				</tr>
 				<tr>
-					<td>ALTER TABLE tab ALTER COLUMN col INT</td>
+					<td>ALTER TABLE tbl ALTER COLUMN col INT</td>
 					<td title="MySQL">No</td>
 					<td title="Oracle">?</td>
 					<td title="Postgres">?</td>
@@ -346,13 +453,13 @@
 					<td title="others" class=""></td>
 					<td title="others" class=""></td>
 					<td title="standard"></td>
-					<td title="alternative">CREATE TABLE tab2 (...col INT)<br>INSERT INTO tab2 SELECT ...col FROM tab<br>DROP TABLE tab<br>CREATE TABLE tab (... col INT)<br>INSERT INTO tab SELECT ...col FROM tab2<br>DROP TABLE tab2</td>
+					<td title="alternative">CREATE TABLE tbl2 (...col INT)<br>INSERT INTO tbl2 SELECT ...col FROM tbl<br>DROP TABLE tbl<br>CREATE TABLE tbl (... col INT)<br>INSERT INTO tbl SELECT ...col FROM tbl2<br>DROP TABLE tbl2</td>
 				</tr>
 				<tr>
 					<td colspan="12">Join syntax</th>
 				</tr>
 				<tr>
-					<td>... FROM tab LEFT JOIN tab2 ON ...</td>
+					<td>... FROM tbl LEFT JOIN tbl2 ON ...</td>
 					<td title="MySQL">Yes</td>
 					<td title="Oracle">?</td>
 					<td title="Postgres">Yes</td>
@@ -365,7 +472,7 @@
 					<td title="alternative"></td>
 				</tr>
 				<tr>
-					<td><s>... FROM tab RIGHT JOIN tab2 ON ...</s></td>
+					<td><s>... FROM tbl RIGHT JOIN tbl2 ON ...</s></td>
 					<td title="MySQL">Yes</td>
 					<td title="Oracle">?</td>
 					<td title="Postgres">Yes</td>
@@ -375,10 +482,10 @@
 					<td title="Informix v10-12" class="red">Informix</td>
 					<td title="others" class=""></td>
 					<td title="standard"></td>
-					<td title="alternative">... FROM tab LEFT JOIN tab2 ON ...</td>
+					<td title="alternative">... FROM tbl LEFT JOIN tbl2 ON ...</td>
 				</tr>
 				<tr>
-					<td>... FROM tab FULL OUTER JOIN tab2 ON ...</td>
+					<td>... FROM tbl FULL OUTER JOIN tbl2 ON ...</td>
 					<td title="MySQL">Yes</td>
 					<td title="Oracle">?</td>
 					<td title="Postgres">Yes</td>
@@ -391,7 +498,7 @@
 					<td title="alternative"></td>
 				</tr>
 				<tr>
-					<td>... FROM tab INNER JOIN tab2 ON ...</td>
+					<td>... FROM tbl INNER JOIN tbl2 ON ...</td>
 					<td title="MySQL">Yes</td>
 					<td title="Oracle">?</td>
 					<td title="Postgres">Yes</td>
@@ -452,6 +559,48 @@
 					<td title="Postgres">No</td>
 					<td title="SQLserver">Yes</td>
 					<td title="IBM DB2">?</td>
+					<td title="SQLite 3">No</td>
+					<td title="others" class=""></td>
+					<td title="others" class=""></td>
+					<td title="standard"></td>
+					<td title="alternative"></td>
+				</tr>
+				<tr>
+					<td colspan="12">Comment</th>
+				</tr>
+				<tr>
+					<td>-- One line comment...</td>
+					<td title="MySQL">Yes</td>
+					<td title="Oracle">Yes</td>
+					<td title="Postgres">Yes</td>
+					<td title="SQLserver">Yes</td>
+					<td title="IBM DB2">Yes</td>
+					<td title="SQLite 3">Yes</td>
+					<td title="others" class=""></td>
+					<td title="others" class=""></td>
+					<td title="standard"></td>
+					<td title="alternative"></td>
+				</tr>
+				<tr>
+					<td>/* Multi-line comment... */</td>
+					<td title="MySQL">Yes</td>
+					<td title="Oracle">Yes</td>
+					<td title="Postgres">Yes</td>
+					<td title="SQLserver">No</td>
+					<td title="IBM DB2">Yes</td>
+					<td title="SQLite 3">Yes</td>
+					<td title="others" class=""></td>
+					<td title="others" class=""></td>
+					<td title="standard"></td>
+					<td title="alternative"></td>
+				</tr>
+				<tr>
+					<td><s># One line comment...</s></td>
+					<td title="MySQL">Yes</td>
+					<td title="Oracle">No</td>
+					<td title="Postgres">No</td>
+					<td title="SQLserver">No</td>
+					<td title="IBM DB2">No</td>
 					<td title="SQLite 3">No</td>
 					<td title="others" class=""></td>
 					<td title="others" class=""></td>
