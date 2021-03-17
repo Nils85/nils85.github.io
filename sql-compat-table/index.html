@@ -253,7 +253,7 @@
 					<td title="others" class=""></td>
 					<td title="others" class=""></td>
 					<td title="standard"></td>
-					<td title="alternative">CREATE TABLE tbl2 (...)<br>INSERT INTO tbl2 SELECT * FROM tbl<br>DROP TABLE tbl</td>
+					<td title="alternative"><a href="#notes">see notes</a></td>
 				</tr>
 				<tr>
 					<td>ALTER TABLE tbl RENAME TO tbl2</td>
@@ -266,7 +266,7 @@
 					<td title="others" class=""></td>
 					<td title="others" class=""></td>
 					<td title="standard"></td>
-					<td title="alternative">CREATE TABLE tbl2 (...)<br>INSERT INTO tbl2 SELECT * FROM tbl<br>DROP TABLE tbl</td>
+					<td title="alternative"><a href="#notes">see notes</a></td>
 				</tr>
 				<tr>
 					<td colspan="11">Foreign key</th>
@@ -334,7 +334,7 @@
 					<td title="others" class=""></td>
 					<td title="others" class=""></td>
 					<td title="standard"></td>
-					<td title="alternative">CREATE TABLE tbl1 (...<br>FOREIGN KEY (col1) REFERENCES tbl2 (col2))</td>
+					<td title="alternative">FOREIGN KEY ...</td>
 				</tr>
 				<tr>
 					<td><s>... ON DELETE RESTRICT</s></td>
@@ -347,7 +347,7 @@
 					<td title="others" class=""></td>
 					<td title="others" class=""></td>
 					<td title="standard"></td>
-					<td title="alternative">CREATE TABLE tbl1 (...<br>FOREIGN KEY (col1) REFERENCES tbl2 (col2))</td>
+					<td title="alternative">FOREIGN KEY ...</td>
 				</tr>
 				<tr>
 					<td><s>... ON DELETE SET DEFAULT</s></td>
@@ -381,11 +381,11 @@
 				<tr>
 					<td>ALTER TABLE tbl ADD col VARCHAR(20) NULL</td>
 					<td title="MySQL">Yes</td>
-					<td title="Oracle">?</td>
+					<td title="Oracle">Yes</td>
 					<td title="Postgres">Yes</td>
 					<td title="SQLserver">Yes</td>
 					<td title="IBM DB2">Yes</td>
-					<td title="SQLite 3">Yes</td>
+					<td title="SQLite 3.2" class="green">Yes</td>
 					<td title="others" class=""></td>
 					<td title="others" class=""></td>
 					<td title="standard"></td>
@@ -394,15 +394,15 @@
 				<tr>
 					<td>ALTER TABLE tbl DROP COLUMN col</td>
 					<td title="MySQL">Yes</td>
-					<td title="Oracle">?</td>
+					<td title="Oracle 8i">Yes</td>
 					<td title="Postgres">Yes</td>
 					<td title="SQLserver">Yes</td>
-					<td title="IBM DB2" class="red">...DROP <s>COLUMN</s>...</td>
-					<td title="SQLite 3">No</td>
+					<td title="IBM DB2 v9.7">Yes</s></td>
+					<td title="SQLite 3.35" class="orange">since v3.35 (2021)</td>
 					<td title="others" class=""></td>
 					<td title="others" class=""></td>
 					<td title="standard"></td>
-					<td title="alternative"></td>
+					<td title="alternative"><a href="#notes">see notes</a></td>
 				</tr>
 				<tr>
 					<td>ALTER TABLE tbl CHANGE col1 col2 INT NOT NULL</td>
@@ -415,7 +415,7 @@
 					<td title="others" class=""></td>
 					<td title="others" class=""></td>
 					<td title="standard"></td>
-					<td title="alternative">ALTER TABLE tbl ADD col2 INT<br>UPDATE tbl SET col2 = col1<br>ALTER TABLE tbl DROP COLUMN col1</td>
+					<td title="alternative"><a href="#notes">see notes</a></td>
 				</tr>
 				<tr>
 					<td>ALTER TABLE tbl RENAME COLUMN col1 TO col2</td>
@@ -428,7 +428,7 @@
 					<td title="others" class=""></td>
 					<td title="others" class=""></td>
 					<td title="standard"></td>
-					<td title="alternative">ALTER TABLE tbl ADD col2 INT<br>UPDATE tbl SET col2 = col1<br>ALTER TABLE tbl DROP COLUMN col1</td>
+					<td title="alternative"><a href="#notes">see notes</a></td>
 				</tr>
 				<tr>
 					<td>ALTER TABLE tbl MODIFY col INT NOT NULL</td>
@@ -441,7 +441,7 @@
 					<td title="others" class=""></td>
 					<td title="others" class=""></td>
 					<td title="standard"></td>
-					<td title="alternative">ALTER TABLE tbl ADD col2 INT<br>UPDATE tbl SET col2 = col<br>ALTER TABLE tbl DROP COLUMN col<br>ALTER TABLE tbl ADD col INT<br>UPDATE tbl SET col = col2</td>
+					<td title="alternative"><a href="#notes">see notes</a></td>
 				</tr>
 				<tr>
 					<td>ALTER TABLE tbl ALTER COLUMN col INT</td>
@@ -454,7 +454,7 @@
 					<td title="others" class=""></td>
 					<td title="others" class=""></td>
 					<td title="standard"></td>
-					<td title="alternative">CREATE TABLE tbl2 (...col INT)<br>INSERT INTO tbl2 SELECT ...col FROM tbl<br>DROP TABLE tbl<br>CREATE TABLE tbl (... col INT)<br>INSERT INTO tbl SELECT ...col FROM tbl2<br>DROP TABLE tbl2</td>
+					<td title="alternative"><a href="#notes">see notes</a></td>
 				</tr>
 				<tr>
 					<td colspan="12">Join syntax</th>
@@ -483,7 +483,7 @@
 					<td title="Informix v10-12" class="red">Informix</td>
 					<td title="others" class=""></td>
 					<td title="standard"></td>
-					<td title="alternative">... FROM tbl LEFT JOIN tbl2 ON ...</td>
+					<td title="alternative">...FROM tbl LEFT JOIN tbl2 ON...</td>
 				</tr>
 				<tr>
 					<td>... FROM tbl FULL OUTER JOIN tbl2 ON ...</td>
@@ -626,6 +626,25 @@
 			</tbody>
 		</table>
 		<div>
+			Notes
+			<ul id="notes">
+				<li>
+					<b>Alternative to: ALTER TABLE tbl RENAME TO tbl2</b>
+					<br>CREATE TABLE tbl2 (...)
+					<br>INSERT INTO tbl2 SELECT * FROM tbl
+					<br>DROP TABLE tbl
+				</li>
+				<br>
+				<li>
+					<b>Alternative to: ALTER TABLE tbl RENAME/CHANGE/MODIFY/ALTER COLUMN</b>
+					<br>CREATE TABLE tbl2 (... col2 INT)
+					<br>INSERT INTO tbl2 SELECT ... col1 FROM tbl
+					<br>DROP TABLE tbl
+					<br>CREATE TABLE tbl (... col2 INT)
+					<br>INSERT INTO tbl SELECT * FROM tbl2
+					<br>DROP TABLE tbl2
+				</li>
+			</ul>
 			Reference manuals
 			<ul>
 				<li>
@@ -658,9 +677,6 @@
 					<a href="https://www.sqlite.org/docs.html">SQLite</a>:
 					<a href="https://www.sqlite.org/lang.html">v3</a>
 				</li>
-				<li><a href="http://www.ibm.com/support/knowledgecenter/SSEPGG/welcome">IBM DB2 database reference</a></li>
-				<li><a href="http://www.firebirdsql.org/en/documentation">Firebird RDBMS reference manuals</a></li>
-				<li><a href="http://infocenter.sybase.com/help/index.jsp">SAP Sybase SQL Anywhere</a></li>
 				<li>
 					<a href="https://www.ibm.com/support/knowledgecenter/SSEPGG/welcome">IBM DB2</a>:
 					<a href="https://www.ibm.com/support/producthub/db2/docs/content/SSEPGG_11.5.0/com.ibm.db2.luw.sql.ref.doc/doc/c0004100.html">v11.5</a>
@@ -671,6 +687,8 @@
 					<a href="http://www.ibm.com/support/knowledgecenter/SSGU8G/welcomeIfxServers">IBM Informix</a>:
 					<a href="http://publib.boulder.ibm.com/infocenter/idshelp/v10/index.jsp">v10</a>
 				</li>
+				<li><a href="http://www.firebirdsql.org/en/documentation">Firebird RDBMS reference manuals</a></li>
+				<li><a href="http://infocenter.sybase.com/help/index.jsp">SAP Sybase SQL Anywhere</a></li>
 				<li><a href="http://www.cubrid.org/manuals">CUBRID</a></li>
 			</ul>
 			SQL standard publications

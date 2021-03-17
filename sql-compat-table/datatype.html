@@ -98,10 +98,10 @@
 				</tr>
 				<tr>
 					<td>DECIMAL(9,2)</td>
-					<td title="MySQL">Yes</td>
+					<td title="MySQL" class="green">max 65 digits</td>
 					<td title="Oracle" class="green">NUMBER(9,2)</td>
-					<td title="Postgres">Yes</td>
-					<td title="SQLserver">Yes</td>
+					<td title="Postgres" class="green">1000 digits or more</td>
+					<td title="SQLserver" class="green">max 38 digits</td>
 					<td title="IBM DB2">Yes</td>
 					<td title="SQLite 3" class="orange">REAL or TEXT</td>
 					<td title="Informix v10" class="green">Informix</td>
@@ -111,10 +111,10 @@
 				</tr>
 				<tr>
 					<td>NUMERIC(9,2)</td>
-					<td title="MySQL">Yes</td>
+					<td title="MySQL" class="green">max 65 digits</td>
 					<td title="Oracle" class="green">NUMBER(9,2)</td>
-					<td title="Postgres">Yes</td>
-					<td title="SQLserver">Yes</td>
+					<td title="Postgres" class="green">1000 digits or more</td>
+					<td title="SQLserver" class="green">max 38 digits</td>
 					<td title="IBM DB2">Yes</td>
 					<td title="SQLite 3" class="orange">REAL or TEXT</td>
 					<td title="others" class="green">Microsoft Access</td>
@@ -136,19 +136,6 @@
 					<td title="alternative">FLOAT(53)</td>
 				</tr>
 				<tr>
-					<td>FLOAT</td>
-					<td title="MySQL" class="orange">single-precision (4 bytes)</td>
-					<td title="Oracle" class="green">FLOAT(126)</td>
-					<td title="Postgres" class="green">DOUBLE PRECISION</td>
-					<td title="SQLserver" class="green">FLOAT(53)</td>
-					<td title="IBM DB2" class="green">double-precision</td>
-					<td title="SQLite 3" class="orange">REAL or TEXT</td>
-					<td title="others" class="green">Microsoft Access</td>
-					<td title="others" class=""></td>
-					<td title="standard"></td>
-					<td title="alternative">FLOAT(53)</td>
-				</tr>
-				<tr>
 					<td>FLOAT(24)</td>
 					<td title="MySQL" class="green">max 53</td>
 					<td title="Oracle" class="green">max 126</td>
@@ -160,19 +147,6 @@
 					<td title="others" class=""></td>
 					<td title="standard">SQL-92</td>
 					<td title="alternative"></td>
-				</tr>
-				<tr>
-					<td>REAL</td>
-					<td title="MySQL" class="orange">DOUBLE PRECISION</td>
-					<td title="Oracle" class="green">FLOAT(63)</td>
-					<td title="Postgres" class="green">6 digits (4 bytes)</td>
-					<td title="SQLserver" class="green">FLOAT(24)</td>
-					<td title="IBM DB2" class="green">single-precision</td>
-					<td title="SQLite 3" class="orange">REAL or TEXT</td>
-					<td title="others" class="green">Microsoft Access</td>
-					<td title="Informix v10" class="green">Informix</td>
-					<td title="standard">SQL-92</td>
-					<td title="alternative">FLOAT(24)</td>
 				</tr>
 				<tr>
 					<td>CHAR(255)</td>
@@ -235,7 +209,7 @@
 					<td title="Oracle">Yes</td>
 					<td title="Postgres">Yes</td>
 					<td title="SQLserver">Yes</td>
-					<td title="IBM DB2">Yes</td>
+					<td title="IBM DB2 v9.7">Yes</td>
 					<td title="SQLite 3">Yes</td>
 					<td title="others" class=""></td>
 					<td title="others" class=""></td>
@@ -586,20 +560,33 @@
 					<td title="alternative">VARCHAR(126)</td>
 				</tr>
 				<tr>
-					<td colspan="11">Other number types</th>
+					<td colspan="11">Other decimal types</th>
 				</tr>
 				<tr>
-					<td>BIGINT</td>
-					<td title="MySQL">Yes</td>
-					<td title="Oracle" class="red">NUMBER(19)</td>
-					<td title="Postgres">Yes</td>
-					<td title="SQLserver">Yes</td>
-					<td title="IBM DB2">Yes</td>
-					<td title="SQLite 3" class="orange">INT or TEXT</td>
-					<td title="others" class="green">Firebird & Interbase</td>
-					<td title="others" class="green">Sybase Informix CUBRID</td>
-					<td title="standard">SQL:2003</td>
-					<td title="alternative">DECIMAL(19,0)</td>
+					<td>FLOAT</td>
+					<td title="MySQL" class="orange">single-precision (4 bytes)</td>
+					<td title="Oracle" class="green">FLOAT(126)</td>
+					<td title="Postgres" class="green">DOUBLE PRECISION</td>
+					<td title="SQLserver" class="green">FLOAT(53)</td>
+					<td title="IBM DB2" class="green">double-precision</td>
+					<td title="SQLite 3" class="orange">REAL or TEXT</td>
+					<td title="others" class="green">Microsoft Access</td>
+					<td title="others" class=""></td>
+					<td title="standard">SQL-92</td>
+					<td title="alternative">FLOAT(53)</td>
+				</tr>
+				<tr>
+					<td>REAL</td>
+					<td title="MySQL" class="orange">DOUBLE PRECISION</td>
+					<td title="Oracle" class="green">FLOAT(63)</td>
+					<td title="Postgres" class="green">6 digits (4 bytes)</td>
+					<td title="SQLserver" class="green">FLOAT(24)</td>
+					<td title="IBM DB2" class="green">single-precision</td>
+					<td title="SQLite 3" class="orange">REAL or TEXT</td>
+					<td title="others" class="green">Microsoft Access</td>
+					<td title="Informix v10" class="green">Informix</td>
+					<td title="standard">SQL-92</td>
+					<td title="alternative">FLOAT(24)</td>
 				</tr>
 				<tr>
 					<td>DEC(9,2)</td>
@@ -613,6 +600,35 @@
 					<td title="others" class=""></td>
 					<td title="standard"></td>
 					<td title="alternative">DECIMAL(9,2)</td>
+				</tr>
+				<tr>
+					<td>DOUBLE</td>
+					<td title="MySQL">Yes</td>
+					<td title="Oracle">No</td>
+					<td title="Postgres">No</td>
+					<td title="SQLserver">No</td>
+					<td title="IBM DB2">Yes</td>
+					<td title="SQLite 3" class="orange">REAL or TEXT</td>
+					<td title="Informix v10" class="red">Informix</td>
+					<td title="others" class="green">Microsoft Access</td>
+					<td title="standard"></td>
+					<td title="alternative">DOUBLE PRECISION</td>
+				</tr>
+				<tr>
+					<td colspan="11">Other integer types</th>
+				</tr>
+				<tr>
+					<td>BIGINT</td>
+					<td title="MySQL">Yes</td>
+					<td title="Oracle" class="red">NUMBER(19)</td>
+					<td title="Postgres">Yes</td>
+					<td title="SQLserver">Yes</td>
+					<td title="IBM DB2">Yes</td>
+					<td title="SQLite 3" class="orange">INT or TEXT</td>
+					<td title="others" class="green">Firebird & Interbase</td>
+					<td title="others" class="green">Sybase Informix CUBRID</td>
+					<td title="standard">SQL:2003</td>
+					<td title="alternative">DECIMAL(19,0)</td>
 				</tr>
 				<tr>
 					<td>MEDIUMINT</td>
@@ -639,19 +655,6 @@
 					<td title="others" class="red">Firebird & CUBRID</td>
 					<td title="standard">SQL-92</td>
 					<td title="alternative">SMALLINT</td>
-				</tr>
-				<tr>
-					<td>DOUBLE</td>
-					<td title="MySQL">Yes</td>
-					<td title="Oracle">No</td>
-					<td title="Postgres">No</td>
-					<td title="SQLserver">No</td>
-					<td title="IBM DB2">Yes</td>
-					<td title="SQLite 3" class="orange">REAL or TEXT</td>
-					<td title="Informix v10" class="red">Informix</td>
-					<td title="others" class="green">Microsoft Access</td>
-					<td title="standard"></td>
-					<td title="alternative">DOUBLE PRECISION</td>
 				</tr>
 				<tr>
 					<td>SERIAL</td>
