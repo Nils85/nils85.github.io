@@ -13,9 +13,14 @@
 		<a href="#">Syntax</a><a href="function.html">Functions</a><a href="datatype.html">Data types</a>
 		&nbsp; compatibility table
 		<div>
-			by <a href="https://github.com/nils85">Vince</a>
 			<a class="button" href="https://github.com/Nils85/nils85.github.io">
 				<img src="github-mark-32px.png">Fork
+			</a>
+			<a class="button" href="https://github.com/Nils85/nils85.github.io/archive/refs/heads/main.zip">
+				Download this doc
+			</a>
+			<a class="button" href="https://github.com/Nils85/nils85.github.io/issues">
+				Report a mistake
 			</a>
 		</div>
 	</header>
@@ -58,6 +63,19 @@
 				</tr>
 				-->
 				<tr>
+					<td>DELETE FROM tbl</td>
+					<td title="MySQL">Yes</td>
+					<td title="Oracle">?</td>
+					<td title="Postgres">Yes</td>
+					<td title="SQLserver">Yes</td>
+					<td title="IBM DB2">?</td>
+					<td title="SQLite 3">Yes</td>
+					<td title="others" class=""></td>
+					<td title="others" class=""></td>
+					<td title="standard"></td>
+					<td title="alternative"></td>
+				</tr>
+				<tr>
 					<td>INSERT INTO ... SELECT ...</td>
 					<td title="MySQL">Yes</td>
 					<td title="Oracle">?</td>
@@ -93,7 +111,20 @@
 					<td title="SQLite 3">Yes</td>
 					<td title="others" class="green">Microsoft Access</td>
 					<td title="others" class="green">and all others...</td>
-					<td title="standard"></td>
+					<td title="standard">SQL-92</td>
+					<td title="alternative"></td>
+				</tr>
+				<tr>
+					<td>SELECT "col1" FROM tbl</td>
+					<td title="MySQL" class="orange">sql_mode=ANSI_QUOTES<br>not set by default</td>
+					<td title="Oracle">Yes</td>
+					<td title="Postgres">Yes</td>
+					<td title="SQLserver 2008" class="green">QUOTED_IDENTIFIER<br>is ON by default</td>
+					<td title="IBM DB2">Yes</td>
+					<td title="SQLite 3">Yes</td>
+					<td title="others" class=""></td>
+					<td title="others" class=""></td>
+					<td title="standard">SQL-92</td>
 					<td title="alternative"></td>
 				</tr>
 				<tr>
@@ -131,32 +162,6 @@
 					<td title="IBM DB2">Yes</td>
 					<td title="SQLite 3">Yes</td>
 					<td title="others" class=""></td>
-					<td title="others" class=""></td>
-					<td title="standard"></td>
-					<td title="alternative"></td>
-				</tr>
-				<tr>
-					<td>DELETE FROM tbl</td>
-					<td title="MySQL">Yes</td>
-					<td title="Oracle">?</td>
-					<td title="Postgres">Yes</td>
-					<td title="SQLserver">Yes</td>
-					<td title="IBM DB2">?</td>
-					<td title="SQLite 3">Yes</td>
-					<td title="others" class=""></td>
-					<td title="others" class=""></td>
-					<td title="standard"></td>
-					<td title="alternative"></td>
-				</tr>
-				<tr>
-					<td>UPDATE tbl SET col1 = val1, col2 = val2</td>
-					<td title="MySQL">Yes</td>
-					<td title="Oracle">Yes</td>
-					<td title="Postgres">Yes</td>
-					<td title="SQLserver">Yes</td>
-					<td title="IBM DB2">?</td>
-					<td title="SQLite 3">Yes</td>
-					<td title="others" class="green">Firebird</td>
 					<td title="others" class=""></td>
 					<td title="standard"></td>
 					<td title="alternative"></td>
@@ -240,6 +245,19 @@
 					<td title="alternative"></td>
 				</tr>
 				<tr>
+					<td>UPDATE tbl SET col1 = 'val1', col2 = 'val2'</td>
+					<td title="MySQL">Yes</td>
+					<td title="Oracle">Yes</td>
+					<td title="Postgres">Yes</td>
+					<td title="SQLserver">Yes</td>
+					<td title="IBM DB2">?</td>
+					<td title="SQLite 3">Yes</td>
+					<td title="others" class="green">Firebird</td>
+					<td title="others" class=""></td>
+					<td title="standard"></td>
+					<td title="alternative"></td>
+				</tr>
+				<tr>
 					<td colspan="11">Table modifications</th>
 				</tr>
 				<tr>
@@ -313,7 +331,7 @@
 				<tr>
 					<td>CREATE TABLE tbl1 (... FOREIGN KEY (col1) REFERENCES tbl2 (col2))</td>
 					<td title="MySQL" class="green">RESTRICT</td>
-					<td title="Oracle" class="green">only ON DELETE no action</td>
+					<td title="Oracle" class="green">only ON DELETE NO ACTION</td>
 					<td title="Postgres" class="green">NO ACTION</td>
 					<td title="SQLserver" class="green">NO ACTION</td>
 					<td title="IBM DB2">?</td>
@@ -337,7 +355,7 @@
 					<td title="alternative"></td>
 				</tr>
 				<tr>
-					<td>... ON DELETE CASCADE</td>
+					<td>... FOREIGN KEY ... ON DELETE CASCADE</td>
 					<td title="MySQL">Yes</td>
 					<td title="Oracle 10g">Yes</td>
 					<td title="Postgres">Yes</td>
@@ -350,7 +368,7 @@
 					<td title="alternative"></td>
 				</tr>
 				<tr>
-					<td>... ON DELETE SET NULL</td>
+					<td>... FOREIGN KEY ... ON DELETE SET NULL</td>
 					<td title="MySQL">Yes</td>
 					<td title="Oracle 10g">Yes</td>
 					<td title="Postgres">Yes</td>
@@ -363,7 +381,7 @@
 					<td title="alternative"></td>
 				</tr>
 				<tr>
-					<td><s>... ON DELETE NO ACTION</s></td>
+					<td><s>... FOREIGN KEY ... ON DELETE NO ACTION</s></td>
 					<td title="MySQL" class="green">RESTRICT</td>
 					<td title="Oracle" class="red">Not explicitly</td>
 					<td title="Postgres">Yes</td>
@@ -376,7 +394,7 @@
 					<td title="alternative">FOREIGN KEY ...</td>
 				</tr>
 				<tr>
-					<td><s>... ON DELETE RESTRICT</s></td>
+					<td><s>... FOREIGN KEY ... ON DELETE RESTRICT</s></td>
 					<td title="MySQL">Yes</td>
 					<td title="Oracle">?</td>
 					<td title="Postgres">Yes</td>
@@ -389,7 +407,7 @@
 					<td title="alternative">FOREIGN KEY ...</td>
 				</tr>
 				<tr>
-					<td><s>... ON DELETE SET DEFAULT</s></td>
+					<td><s>... FOREIGN KEY ... ON DELETE SET DEFAULT</s></td>
 					<td title="MySQL" class="red">InnoDB reject it</td>
 					<td title="Oracle">?</td>
 					<td title="Postgres">Yes</td>
@@ -402,7 +420,7 @@
 					<td title="alternative"></td>
 				</tr>
 				<tr>
-					<td>... ON UPDATE ...</td>
+					<td><s>... FOREIGN KEY ... ON UPDATE ...</s></td>
 					<td title="MySQL">Yes</td>
 					<td title="Oracle 12">No</td>
 					<td title="Postgres">Yes</td>
@@ -684,6 +702,8 @@
 					<br>DROP TABLE tbl2
 				</li>
 			</ul>
+		</div>
+		<div style="float:left">
 			Reference manuals
 			<ul>
 				<li>
@@ -730,6 +750,8 @@
 				<li><a href="http://infocenter.sybase.com/help/index.jsp">SAP Sybase SQL Anywhere</a></li>
 				<li><a href="http://www.cubrid.org/manuals">CUBRID</a></li>
 			</ul>
+		</div>
+		<div style="float:left">
 			SQL standard publications
 			<ul>
 				<li><a href="http://en.wikipedia.org/wiki/SQL:2016">ISO/IEC SQL:2016</a></li>

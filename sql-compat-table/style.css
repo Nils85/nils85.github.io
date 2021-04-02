@@ -57,9 +57,9 @@ header a.button img {
 	width: 13px;
 	height: 13px}
 
-main p,
-main div {
-	margin: 25px}
+main div,
+main p {
+	margin: 25px 50px}
 
 main p {
 	text-align: center}
