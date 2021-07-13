@@ -26,4 +26,7 @@ for (var i = 0; i < elements.length; ++i)
 elements = document.getElementsByTagName("a");
 
 for (var i = 3; i < elements.length; ++i)
-{ elements[i].target = "_blank"; }
+{
+	if (elements[i].innerText != "see notes")
+	{ elements[i].target = "_blank"; }
+}

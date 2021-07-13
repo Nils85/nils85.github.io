@@ -180,7 +180,7 @@
 					<td title="others" class="green">Firebird</td>
 					<td title="others" class=""></td>
 					<td title="standard">SQL-92</td>
-					<td title="alternative">... WHERE x LIKE '_%'</td>
+					<td title="alternative"><a href="#notes">see notes</a></td>
 				</tr>
 				<tr>
 					<td>CHARACTER_LENGTH(x)</td>
@@ -193,7 +193,7 @@
 					<td title="others" class=""></td>
 					<td title="others" class=""></td>
 					<td title="standard">SQL-92</td>
-					<td title="alternative">... WHERE x LIKE '_%'</td>
+					<td title="alternative"><a href="#notes">see notes</a></td>
 				</tr>
 				<tr>
 					<td>IFNULL(x,y)</td>
@@ -245,7 +245,7 @@
 					<td title="others" class="green">Microsoft Access</td>
 					<td title="others" class=""></td>
 					<td title="standard"></td>
-					<td title="alternative">... WHERE x LIKE '_%'</td>
+					<td title="alternative"><a href="#notes">see notes</a></td>
 				</tr>
 				<tr>
 					<td>LENGTH(x)</td>
@@ -258,7 +258,7 @@
 					<td title="others" class="red">Firebird</td>
 					<td title="others" class="red">Microsoft Access</td>
 					<td title="standard"></td>
-					<td title="alternative">... WHERE x LIKE '_%'</td>
+					<td title="alternative"><a href="#notes">see notes</a></td>
 				</tr>
 				<tr>
 					<td>NVL(x,y)</td>
@@ -357,7 +357,7 @@
 		</table>
 		<div>
 			Notes
-			<ul>
+			<ul id="notes">
 				<li>It's possible to create stored procedures for unavailable functions in your database system (except with SQLite)</li>
 				<li>
 					Some functions used with WHERE can be replaced by the keyword LIKE:<br>
